@@ -31,3 +31,4 @@ for now add image and do display none so we can have image there but they can't 
 and later on we will add effects 
 
 rem size value make position static of object
+------------------------------------------------------------------------------------------------------day 2
