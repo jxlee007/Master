@@ -25,3 +25,10 @@ now we used jugaad to align h5 right side with h1 section by making class
 
 we used remixicon for using icon in link of footer
 ------------------------------------------------------------------------------------------------------ DAY 1
+
+econd section
+for now add image and do display none so we can have image there but they can't disturb screen
+and later on we will add effects 
+
+rem size value make position static of object
+------------------------------------------------------------------------------------------------------ DAY 2
