@@ -32,3 +32,10 @@ and later on we will add effects
 
 rem size value make position static of object
 ------------------------------------------------------------------------------------------------------day 2
+if in css child div is absolute then you have to make parent div relative 
+if you not do so then ex. our herofooter was lost when script.js applied 
+
+smooth scrolling 
+    ✅ attach loco scroll css 
+    ✅ attach locomotive scroll min js 
+    ✅ some code from loco github for js 

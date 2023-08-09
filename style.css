@@ -12,13 +12,26 @@ html, body{
     
 }
 
+/* cubic beizer = ease out exponential custom control */
+
+#dot{
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
+    position: absolute;
+    z-index: 99999;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
 #main
 {
     width: 100%;
-    height: auto;
+    background-color: black;
 }
 
 #hero{
+    position: relative;
     width: 100%;
     height: 100vh;
     color: #fff;
@@ -115,8 +128,9 @@ html, body{
     height: 100vh;
     padding-top: 200px;
     padding-right: 10vw;
+    padding-left: 2vw;
     color: #fff;
-    background-color: red;
+    
 }
 
 .elem{
@@ -127,8 +141,9 @@ html, body{
     justify-content: space-between;
     border-top: 1px solid #fff;
     color: #fff;
-    padding: 3.5vw 3vw;
     padding-right: 0;
+    padding-top: 3.5vw;
+    padding-bottom: 3.5vw;
 }
 
 .elem img{
@@ -138,10 +153,15 @@ html, body{
     height: 140%;
 }
 
+
 .elem h1{
     opacity: .6;
     font-size: 7.5vw;
     text-transform: uppercase;
+}
+
+.elem h5{
+    font-size: 16px;
 }
 
 #lastelem{
@@ -152,18 +172,20 @@ html, body{
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 50px;
-    padding: 10vw 10vw;
-    padding-left: 40vw;
+    gap: 90px;
+    padding: 30vw 10vw;
+    padding-left: 35vw;
+    padding-bottom: 20vh;
 }
 
 #about img{
-    width: 200px;
+    width: 235px;
+    padding-top: 0px;
 }
 
 #txtabout{
     color: #fff;
-    width: 25rem;
+    width: 30rem;
 }
 
 #txtabout h5{
@@ -176,7 +198,7 @@ html, body{
 #txtabout p{
     line-height: 1.5;
     margin-bottom: 30px;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 #txtabout a{
@@ -240,6 +262,3 @@ html, body{
 }
 
 /* second day with error even in original source code*/
-
-
-
