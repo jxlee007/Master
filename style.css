@@ -67,9 +67,9 @@ html, body{
 }
 
 #heading h1 {
-    font-family: "General Sans Regular", sans-serif;
+    font-family: "General Sans", sans-serif;
     font-size: 10vw;
-    font-weight: 200px;
+    font-weight: 500px;
     line-height: 0.9;
     color: #a3a3a3;
     opacity: .9;
