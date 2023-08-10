@@ -42,7 +42,7 @@ const scroll = new LocomotiveScroll({
 // arrow = anonymous = noname 
 // Arrow functions and anonymous functions are not Hoisted , which means that they cannot be called before declarations
 
-
+// ---------------------------------------------------- FINAL TYPE -----------------------------------------
 
 // backticks `` are used to joint two things in js = alternative of + operator
 // backticks `` = template strings
@@ -53,10 +53,48 @@ function circleMousefollow() {
         })
 }
 
+// ------------------------------------------------------ DAY 3-------------------------------------------------
+// creating animation for hero heading
+//  tl = timeline
+// for delaying each element in a class one after another we use stagger 
+// delay can given in negative
+function HeroAnim (){
+    var tl = gsap.timeline();
+    
+    tl.from('#nav',{
+        y: -10,
+        opacity: 0,
+        ease: Expo.easeInOut,
+        // duration: 1
+        duration: .6
+    })
 
+    tl.to('.boxelem',{
+        y: 0,
+        opacity: 1,
+        ease: Expo.EaseInOut,
+        // duration: 2,
+        duration: 1,
+        // stagger: .2,
+        stagger: .1,
+        // delay: -1
+        delay: .5
+    })
+
+    tl.from('#herofooter',{
+        y: 10,
+        opacity: 0,
+        ease: Expo.EaseInOut,
+        // duration: 1.5,
+        duration: .4,
+        // delay: -1
+        delay: .1
+    })
+
+}
 
 
 // initiate the function
 circleMousefollow();
-
+HeroAnim();
 
