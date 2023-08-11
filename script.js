@@ -46,10 +46,10 @@ const scroll = new LocomotiveScroll({
 
 // backticks `` are used to joint two things in js = alternative of + operator
 // backticks `` = template strings
-function circleMousefollow() {
+function circleMousefollow(xscale,yscale) {
         window.addEventListener('mousemove' , function(details){
             console.log(details);
-            document.querySelector('#dot').style.transform = `translate(${details.clientX}px, ${details.clientY}px)`
+            document.querySelector('#dot').style.transform = `translate(${details.clientX}px, ${details.clientY}px) scale(${xscale}, ${yscale})`
         })
 }
 
@@ -93,8 +93,71 @@ function HeroAnim (){
 
 }
 
+// ----------------------------------------------------- DAY 4 ----------------
+// revise this step imp ******************
+// circleskew is used to make circle follow mouse cursor so that when mouse moves at a speed then as per to that distance covered
+// our circle will be skewed (chapta)
+// gsap clamp is used to limit the the range of the number given in data in form of mouse co ordinates 
+
+// ----------------------------------------------- ORIGINAL TYPE ------------------------------
+// for understanding logic of circle skew
+// function circleskew (){
+
+//     var xscale = 1;
+//     var yscale = 1;
+
+//     var xprev = 0;
+//     var yprev = 0;
+
+//     window.addEventListener('mousemove', function(details){
+//         var xdiff = details.clientX - xprev;
+//         var ydiff = details.clientY - yprev;
+
+//         xprev = details.clientX;
+//         yprev = details.clientY;
+
+//         console.log(xdiff , ydiff);
+
+//     });
+// }
+
+// circleskew function is created for collecting , generating and passing data to circleMousefollow() 
+// mousemove = event
+// mousestop = jugaad
+
+var timeout;
+
+function circleskew (){
+// define default scale value
+    var xscale = 1;
+    var yscale = 1;
+
+    var xprev = 0;
+    var yprev = 0;
+
+    window.addEventListener('mousemove', function(details){
+
+        // if i dont write this line it give dot a glitchy effect and flow
+        clearTimeout(timeout);
+
+        xscale = gsap.utils.clamp(.8, 1.2, details.clientX - xprev);
+        yscale = gsap.utils.clamp(.8, 1.2, details.clientY - yprev);
+
+        xprev = details.clientX;
+        yprev = details.clientY;
+
+        circleMousefollow(xscale,yscale);
+
+        timeout = setTimeout(function(){
+            document.querySelector('#dot').style.transform = `translate(${details.clientX}px, ${details.clientY}px) scale( 1 , 1 )`
+        },100);
+       
+    });
+}
+
 
 // initiate the function
 circleMousefollow();
 HeroAnim();
+circleskew();
 
