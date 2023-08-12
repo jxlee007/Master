@@ -56,6 +56,7 @@ function circleMousefollow(xscale,yscale) {
 // ------------------------------------------------------ DAY 3-------------------------------------------------
 // creating animation for hero heading
 //  tl = timeline
+// this function has three methods
 // for delaying each element in a class one after another we use stagger 
 // delay can given in negative
 function HeroAnim (){
@@ -120,10 +121,11 @@ function HeroAnim (){
 
 //     });
 // }
-
+// --------------------------------------------------- FINAL TYPE ---------------------------------------
 // circleskew function is created for collecting , generating and passing data to circleMousefollow() 
 // mousemove = event
 // mousestop = jugaad
+// gsap.utils.clamp is to keep value in specific limits of an element in javascript
 
 var timeout;
 
@@ -137,7 +139,7 @@ function circleskew (){
 
     window.addEventListener('mousemove', function(details){
 
-        // if i dont write this line it give dot a glitchy effect and flow
+        // if i don't write this line it give dot a glitchy effect and flow
         clearTimeout(timeout);
 
         xscale = gsap.utils.clamp(.8, 1.2, details.clientX - xprev);
@@ -151,7 +153,6 @@ function circleskew (){
         timeout = setTimeout(function(){
             document.querySelector('#dot').style.transform = `translate(${details.clientX}px, ${details.clientY}px) scale( 1 , 1 )`
         },100);
-       
     });
 }
 
@@ -161,3 +162,38 @@ circleMousefollow();
 HeroAnim();
 circleskew();
 
+// --------------------------------------------------------- DAY 6 ----------------------------------------------------
+// today we will be writing function for second div
+// using queryselectorall bcause it will provide a nodelist
+// nodelist is a type of array sturcture on which we can use for each loop
+// to get any details about div we use  getboundingclientrect method in js 
+// gsap.utils.clamp is to keep value in specific limits of an element in javascript
+
+document.querySelectorAll('.elem').forEach(function(elem){
+
+    var rotate = 0;
+    var rotatediff = 0;
+
+    elem.addEventListener("mouseleave", function(details) {
+        gsap.to(elem.querySelector("img"), {
+            opacity: 0,
+            ease: Power3,
+            duration: 0.5,
+        });
+    });
+
+    elem.addEventListener("mousemove", function (details) {
+        var diff = details.clientY - elem.getBoundingClientRect().top;
+
+        rotatediff =  details.clientX - rotate ;
+        rotate = details.clientX;
+
+        gsap.to(elem.querySelector("img"), {
+            opacity: 1,
+            ease: Power3,
+            top: diff,
+            left: details.clientX,
+            rotate: gsap.utils.clamp(-20, 20, rotatediff * 0.5)
+        });
+    });
+});

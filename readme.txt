@@ -57,3 +57,35 @@ downloaded font as resource for local machine (your device = downloaded and inst
 ----------------------------------------------------------------------------------------------------- DAY 5
 
 For making transition in hero screen we will make div = box
+A timeline is like a sequence of animations that are played in a specific order.
+
+
+
+concepts
+Functions: Understanding how to define and use functions to group and organize code.
+Functions: Understanding how functions work, how to define them, and how to use them to organize and encapsulate code.
+
+DOM Manipulation: Interacting with a webpage's elements using JavaScript to modify their properties.
+DOM Manipulation: Knowing how to manipulate the Document Object Model (DOM), which represents the structure of a webpage, to change element properties and apply transformations.
+
+Variables: Declaring and using variables to store and manipulate data.
+
+GSAP (GreenSock Animation Platform): Basic knowledge of using the GSAP library to create animations.
+External Libraries (GSAP): Awareness of how to incorporate and use external libraries like GSAP (GreenSock Animation Platform) to create animations and effects.
+
+CSS Selectors: Identifying and targeting HTML elements using CSS selector syntax.
+CSS Transforms: Basic knowledge of CSS transform property and its usage to apply scaling and translation effects to elements.
+
+Animation Properties: Understanding the animation properties being used, like y (vertical position) and opacity (transparency).
+Easing: Grasping the concept of easing functions for smooth animation acceleration and deceleration.
+Staggering: Understanding how to create a sequence of animations with a delay for each element.
+Delays: Using delays to time animations to start after a certain period.
+Timeouts and Intervals: Understanding how setTimeout() is used to delay an action, and how it can be cleared with clearTimeout().
+
+Comments: Reading and writing comments to understand and explain code.
+
+Event Handling: Knowledge of how to listen for and respond to events, like mouse movement (mousemove in this case).
+Conditional Statements: Understanding how to use if statements and conditionals (gsap.utils.clamp() function) to control the flow of the program based on certain conditions.
+Scope and Closures: A basic understanding of variable scope and how closures work to maintain state between function calls.
+Template Literals: Familiarity with template literals (using backticks ``) for creating strings with embedded expressions.
+Mouse Coordinates: Basic understanding of how to obtain mouse coordinates and use them for calculations.
