@@ -156,11 +156,73 @@ function circleskew (){
     });
 }
 
+// modified
+// Function to update the time in the specified format
+function updateRealTime() {
+    const date = new Date();
+    
+    // Get hours and minutes in 12-hour format
+    const hours = date.getHours() % 12 || 12;
+    const minutes = String(date.getMinutes()).padStart(2, '0');
+    
+    // Determine if it's AM or PM
+    const meridiem = date.getHours() >= 12 ? 'PM' : 'AM';
+    
+    // Get the time zone abbreviation
+    const timeZone = new Date().toLocaleTimeString('en-us', { timeZoneName: 'short' }).split(' ')[2];
+    
+    // Format the time string
+    const timeString = `${hours}:${minutes} ${meridiem} ${timeZone}`;
+    
+    // Update the time element in the footer
+    const timeElement = document.getElementById('realtime');
+    if (timeElement) {
+        timeElement.textContent = timeString;
+    }
+}
+
+
+
+// glitch
+// function to add realtime in footer
+// function updateRealTime() {
+//     const realTimeElement = document.getElementById('realtime');
+//     const now = new Date();
+//     const hours = now.getHours();
+//     const minutes = now.getMinutes().toString().padStart(2, '0');
+//     const ampm = hours >= 12 ? 'PM' : 'AM';
+//     const formattedHours = (hours % 12) || 12; // Convert to 12-hour format
+//     const timeZone = now.toLocaleTimeString('en-US', { timeZoneName: 'short' });
+    
+//     const timeString = `${formattedHours}:${minutes} ${ampm} ${timeZone}`;
+//     realTimeElement.textContent = timeString;
+// }
+
+// working
+// // Function to update and display real-time with AM/PM and time zone
+// function updateRealTime() {
+//     const realTimeElement = document.getElementById('realtime');
+//     const now = new Date();
+//     const hours = now.getHours();
+//     const minutes = now.getMinutes().toString().padStart(2, '0');
+//     const amPm = hours >= 12 ? 'PM' : 'AM';
+//     const formattedHours = (hours % 12) || 12;
+//     const timeZone = now.toLocaleTimeString('en-US', { timeZoneName: 'short' }); // Replace with the desired time zone abbreviation
+    
+//     const timeString = `${formattedHours}:${minutes} ${amPm} ${timeZone}`;
+//     realTimeElement.textContent = timeString;
+// }
+
+
 
 // initiate the function
 circleMousefollow();
 HeroAnim();
 circleskew();
+updateRealTime();
+
+// Call the function at intervals (every minute)
+setInterval(updateRealTime, 60000);
 
 // --------------------------------------------------------- DAY 6 ----------------------------------------------------
 // today we will be writing function for second div
