@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated-sidebar</title>
+
+    <style>
+        .nav{
+            height: 100%;
+            width:0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            /* to apply gradient property we use bg image not bg color */
+            /* background-image:  linear-gradient(red, yellow); */
+            background-image: conic-gradient(red, yellow, green, blue, darkblue);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .nav a{
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            color: yellow;
+        }
+
+        .nav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            }
+
+    </style>
+</head>
+
+<body>
+    <div id="sidebar" class="nav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+    <!--This is HTML code for creating a close button with an "X" symbol inside it. 
+        The `href="javascript:void(0)"` part indicates that clicking the link won't navigate to a new page.
+        The `class="closebtn"` attribute assigns a CSS class to the link, and 
+        the `onclick="closeNav()"` attribute specifies that when the link is clicked, 
+        the JavaScript function `closeNav()` will be called. 
+        This is commonly used to close navigation menus or modal dialogs on a web page.
+        A modal dialog is a temporary window or pop-up that appears on top of the main content of a webpage or application.-->
+
+        <a href="#" target="_blank" rel="noopener noreferrer">About</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Services</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Clients</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Contacts</a>
+    </div>   
+
+    <span   style="font-size: 30px; cursor:pointer;" 
+            onclick="openNav()"> &#9776; OPEN</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("sidebar").style.width = "35%";
+            }
+
+        function closeNav() {
+            document.getElementById("sidebar").style.width = "0";
+            }
+    </script>
+
+</body>
+</html>
