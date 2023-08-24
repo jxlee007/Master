@@ -317,6 +317,21 @@ html, body{
 /* Example media query for small screens (up to 768px) */
 @media (max-width: 768px) {
 
+    .sidenav.open {
+        position: fixed;
+        z-index: 10000;
+        width: 100%; /* Open sidebar with 100% width on small screens */
+    }
+
+    .sidenav a {
+        font-size: 6vw; /* Adjust font size for small screens */
+    }
+
+    #sidebar .closebtn{
+        font-size: 10vw;
+    }
+
+
     /* Adjustments for the hero section */
     #heading h1 {
         font-size: 14vw; /* Adjust font size for smaller screens */
@@ -424,4 +439,11 @@ html, body{
     #left {
         gap: 20px;
     }
+}
+
+/* added changes */
+.hidden{
+    /* display: none; */
+    visibility: hidden;
+    transition: all .1s ;
 }
