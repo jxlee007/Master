@@ -397,6 +397,10 @@ html, body{
         font-weight: 0;
     }
 
+    .elem img{
+        visibility: hidden;
+    }
+
     /* Adjustments for the about section */
     #about {
         flex-direction: column;
