@@ -10,7 +10,6 @@ html, body{
     height: 100%;
     background-color: black;
     font-family: 'General Sans', sans-serif;
-    
 }
 
 /* cubic beizer = ease out exponential custom control */
@@ -37,7 +36,6 @@ html, body{
     width: 100%;
     height: 100vh;
     color: #fff;
-    
 }
 
 #nav{
@@ -49,16 +47,51 @@ html, body{
     color: white;
 }
 
-#nav a{
+#nav #name{
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: #fff;
 }
 
 #nav h3{
     font-size: 16px;
     margin-right: 10px;
 }
+
+/* added changes */
+.sidenav{
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: conic-gradient(white,lightgrey, grey, black);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+.sidenav a:hover{
+    color: silver;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+    font-size: 2vw;
+    }
 
 #heading{
     margin-top: 90px;
@@ -255,7 +288,6 @@ html, body{
     align-items: center;
     justify-content: space-between;
     color: #fff;
-    
 }
 
 #left{
