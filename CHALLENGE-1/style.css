@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'General Sans', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html, body{
@@ -10,7 +11,11 @@ html, body{
     height: 100%;
     background-color: black;
     font-family: 'General Sans', sans-serif;
-}
+} 
+
+/* #sidebar a :hover ~ .cursor{
+    transform: scale(10);
+} */
 
 /* cubic beizer = ease out exponential custom control */
 
@@ -18,10 +23,12 @@ html, body{
     transition: all cubic-bezier(0.19, 1, 0.22, 1) .8s;
     position: absolute;
     z-index: 99999;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: #fff;
     border-radius: 50%;
+    /* transform: translate(-50%,-50%); */
+    mix-blend-mode: difference;
 }
 
 #main
