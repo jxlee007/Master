@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background: url('pg-1.jpg');
+    background-size: 120%;
+    background-position: top-center;
+    background-repeat: no-repeat;
+    
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    padding: 3vw 6vw;
+    background-color: transparent;
+    cursor: auto;
+}
+
+#digisign{
+    padding: 1.5vw 4vw;
+    background-color: red;
+}
+
+#side{
+    padding-right: 3vw;
+    cursor: pointer;
+}
+
+#side #list{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#side a{
+    position: sticky;
+    padding: .7vw .5vw;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .9vw;
+    letter-spacing: .1vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#side a:hover{
+    color: lightgrey;
+}
+
+#hiddenlist{
+    display: none;
+}
+
+#hoverlist:hover + #hiddenlist{
+    display: inline-flex;
+    z-index: 5;
+    align-items: flex-end;
+    padding: .7vw;
+    text-transform: uppercase;
+    color: black;
+    background-color: #fff;
+    line-height: 1.5vw;
+    font-size: .9vw;
+    animation: moveToUp .3s ease-in;
+}
+
+@keyframes moveToUp {
+    0% {
+      transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+

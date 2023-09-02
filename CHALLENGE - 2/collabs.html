@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collabs</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html,body{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3vw 6vw;
+            background-color: transparent;
+            cursor: auto;
+        }
+
+        #digisign{
+            padding: 1.5vw 4vw;
+            background-color: red;
+            color: black;
+        }
+
+        #side{
+            padding-right: 3vw;
+            cursor: pointer;
+        }
+
+        #side a{
+            padding: .7vw .5vw;
+            text-decoration: none;
+            color: darkgray;
+            text-transform: uppercase;
+            font-size: .9vw;
+            letter-spacing: .1vw;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        #side a:hover{
+            color: lightgrey;
+        }
+
+        #main h2{
+            display: flex;
+            justify-content: center;
+            color: black;
+            text-transform: uppercase;
+            padding: 3vw;
+            font-size: 1.7vw;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        #main img{
+            width: 90%;
+        }
+
+        #img{
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            padding: 2vw;
+            position: relative;
+        }
+
+        .bold{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 3vw;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: #fff;
+            font-size: 6vw;
+            text-transform: uppercase;
+        }
+
+        .thin{
+            position: absolute;
+            text-transform: uppercase;
+            top: 70%;
+            left: 13%;
+            color: #fff;
+            font-size: 1vw;
+        }
+
+        #abt{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 9vw;
+            background-color: rgb(240, 240, 240);
+            cursor: pointer;
+            bottom: 40%;
+        }
+
+        #abt h1{
+            padding: 2vw ;
+            text-transform: capitalize;
+            font-size: 4vw;
+            font-weight: 100;
+            letter-spacing: .2vw;
+            color: black;
+        }
+
+        #abt a{
+            text-decoration: none;
+            font-size: 1.5vw;
+            color: black;
+            padding:.3vw;
+            cursor: pointer;
+        }
+
+        #abt a:hover{
+            color: grey;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <div id="digisign"></div>
+            <div id="side">
+                <a href="shops.html" id="hoverlist">shop</a>
+                <a href="collabs.html">collabs</a>
+                <a href="about.html">about</a>
+                <a href="contact.html">contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="main">
+
+        <div>
+            <h2>collabs</h2>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-1.jpg">
+            <h1 class="bold">pm &diams; theory 11</h1>
+            <h5 class="thin">privacy playing cards</h5>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-2.jpg">
+            <h1 class="bold">pm &#9747; nomantic</h1>
+            <h5 class="thin">camera bags</h5>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-3.jpg">
+            <h1 class="bold">pm &#9747; polar pro</h1>
+            <h5 class="thin">premium lens filters</h5>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-4.jpg">
+            <h1 class="bold">pm &#9747; clocks &#43; colours</h1>
+            <h5 class="thin">premium lens filters</h5>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-5.jpg">
+            <h1 class="bold">pm &#9747; james coffee</h1>
+            <h5 class="thin">signature coffee &#38; merch </h5>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-6.jpg">
+            <h1 class="bold">pm 	&#9747; angels and airways</h1>
+            <h5 class="thin">documentry coming-soon</h5>
+        </div>
+
+        <div id="img">
+            <img src="Collab-pg-7.jpg">
+            <h1 class="bold">pm &#9747; royal<br>canadian mint</h1>
+            <h5 class="thin">moraine lake coin</h5>
+        </div>
+    </div>
+
+    <div id="abt">
+        <div>
+            <h1>follow</h1>
+        </div>
+
+        <div>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
+        </div>
+    </div>
+
+    
+</body>
+</html>
