@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html,body{
+            height: 100vh;
+            width: 100vw;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3vw 6vw;
+            background-color: transparent;
+            cursor: auto;
+        }
+
+        #digisign{
+            padding: 1.5vw 4vw;
+            background-color: red;
+            color: black;
+            cursor: pointer;
+        }
+
+        #side{
+            padding-right: 3vw;
+            cursor: pointer;
+        }
+
+        #side a{
+            padding: .7vw .5vw;
+            text-decoration: none;
+            color: darkgray;
+            text-transform: uppercase;
+            font-size: .9vw;
+            letter-spacing: .1vw;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        #side a:hover{
+            color: lightgrey;
+        }
+
+        #main h2{
+            display: flex;
+            justify-content: center;
+            color: black;
+            text-transform: uppercase;
+            padding: 3vw;
+            font-size: 1.7vw;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        #main img{
+            width: 90%;
+            /* new learning */
+            filter: brightness(90%);
+        }
+
+        #img{
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            padding: 2vw;
+            position: relative;
+        }
+
+        .bold{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 3vw;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            color: #fff;
+            font-size: 6vw;
+            text-transform: uppercase;
+        }
+
+        .thin{
+            position: absolute;
+            text-transform: uppercase;
+            top: 55%;
+            left: 13%;
+            color: #fff;
+            font-size: 1vw;
+        }
+
+        #abt{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 9vw;
+            background-color: rgb(240, 240, 240);
+            cursor: pointer;
+            bottom: 40%;
+        }
+
+        #abt h1{
+            padding: 2vw ;
+            text-transform: capitalize;
+            font-size: 4vw;
+            font-weight: 100;
+            letter-spacing: .2vw;
+            color: black;
+        }
+
+        #abt a{
+            text-decoration: none;
+            font-size: 1.5vw;
+            color: black;
+            padding:.3vw;
+            cursor: pointer;
+        }
+
+        #abt a:hover{
+            color: grey;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <div id="digisign"><a href="index.html"></a></div>
+            <div id="side">
+                <a href="shops.html" id="hoverlist">shop</a>
+                <a href="collabs.html">collabs</a>
+                <a href="about.html">about</a>
+                <a href="contact.html">contact</a>
+            </div>
+        </nav>
+    </div>
+
+    <div id="main">
+
+        <div id="img">
+            <img src="shop-1.jpg">
+            <h1 class="bold">photo presets</h1>
+            <h5 class="thin">custom preset pack for adobe lightroom cc.</h5>
+        </div>
+
+        <div id="img">
+            <img src="shop-2.jpg">
+            <h1 class="bold">pm prints</h1>
+            <h5 class="thin">limited edition archival prints.</h5>
+        </div>
+
+        <div id="img">
+            <img src="shop-3.jpg">
+            <h1 class="bold">motion gfx</h1>
+            <h5 class="thin">4 custom packs of effects for videos</h5>
+        </div>
+
+        <div id="img">
+            <img src="shop-4.jpg">
+            <h1 class="bold">video luts</h1>
+            <h5 class="thin">color gradient tools for adobe premiere cc, fcpx, ae.</h5>
+        </div>
+
+        <div id="img">
+            <img src="shop-5.jpg">
+            <h1 class="bold">sound packs</h1>
+            <h5 class="thin">killer sounds to take your project to the next level.</h5>
+        </div>
+
+        <div id="img">
+            <img src="shop-6.jpg">
+            <h1 class="bold">pm gear</h1>
+            <h5 class="thin">custom made products.</h5>
+        </div>
+
+        <div id="img">
+            <img src="shop-7.jpg">
+            <h1 class="bold">jack's pirate life</h1>
+            <h5 class="thin">limited edition drops - fly the flag.</h5>
+        </div>
+    </div>
+
+    <div id="abt">
+        <div>
+            <h1>follow</h1>
+        </div>
+
+        <div>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
+        </div>
+    </div>
+
+    
+</body>
+</html>

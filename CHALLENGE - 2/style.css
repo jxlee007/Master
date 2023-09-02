@@ -29,6 +29,7 @@ nav{
 #digisign{
     padding: 1.5vw 4vw;
     background-color: red;
+    cursor: pointer;
 }
 
 #side{
@@ -83,3 +84,38 @@ nav{
     }
   }
 
+
+
+  #abt{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 9vw;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    bottom: 40%;
+}
+
+#abt h1{
+    padding: 2vw ;
+    text-transform: capitalize;
+    font-size: 4vw;
+    font-weight: 100;
+    letter-spacing: .2vw;
+    color: black;
+}
+
+#abt a{
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: black;
+    padding:.3vw;
+    cursor: pointer;
+}
+
+#abt a:hover{
+    color: grey;
+}
