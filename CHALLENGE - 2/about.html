@@ -14,23 +14,21 @@
 
     <style>
         *{
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
             font-family: 'Nunito Sans', sans-serif;
             scroll-behavior: smooth;
         }
 
         html,body{
-            height: 100vh;
-            width: 100vw;
+            height: 0;
         }
 
         nav{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 3vw 6vw;
+            padding: 1.8vw 7.4vw 0vw;
+
             background-color: transparent;
             cursor: auto;
         }
@@ -43,18 +41,20 @@
         }
 
         #side{
-            padding-right: 3vw;
+            display: inline-flex;
+            justify-content: center;
+            align-items: flex-end;
             cursor: pointer;
         }
 
         #side a{
             padding: .7vw .5vw;
             text-decoration: none;
-            color: darkgray;
+            color: #bdbdbd;
             text-transform: uppercase;
             font-size: .9vw;
             letter-spacing: .1vw;
-            font-weight: 500;
+            font-weight: 400;
             cursor: pointer;
         }
 
@@ -62,24 +62,85 @@
             color: lightgrey;
         }
 
+        #main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 3.7vw 7.4vw;
+            flex-wrap: wrap;
+        }
 
-        
+        #first{
+            display: flex;
+            align-items: baseline;
+            flex-direction: row;
+            width: 82.5vw;
+        }
 
+        #right{
+            display: inline-flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 41vw;
+        }
+
+        #right h1{
+            font-weight: 400;
+            letter-spacing: .4vw;
+            font-size: 3.4vw;
+        }
+
+        #right p{
+            letter-spacing: .1vw;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 1vw;
+            line-height: 1.6;
+        }
+
+
+        #left{
+            display: inline-flex; 
+            flex-direction: row;
+            flex-grow: 1;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        #left a{
+            text-decoration: none;
+            color: #000;
+            padding: .5vw;
+            font-size: 1.7vw;
+        }
+
+        #second{
+            /* background-color: green; */
+        }
+
+        #image{
+            display: flex;
+            justify-content: flex-end;
+            gap: 1vw;
+            aspect-ratio: contain;
+            height: 30vw;
+            padding-top: 1.7vw;
+        }
+
+        /* about section */
         #abt{
             display: flex;
-            width: 100%;
             flex-direction: column;
-            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            padding: 9vw;
-            background-color: rgb(240, 240, 240);
+            padding: 9vw 7.4vw;
+            background-image: linear-gradient(rgb(245, 245, 245) ,whitesmoke);
             cursor: pointer;
-            bottom: 40%;
         }
 
         #abt h1{
-            padding: 2vw ;
+            margin: 0;
+            padding-bottom: 1.24vw;
             text-transform: capitalize;
             font-size: 4vw;
             font-weight: 100;
@@ -89,7 +150,7 @@
 
         #abt a{
             text-decoration: none;
-            font-size: 1.5vw;
+            font-size: 1.6vw;
             color: black;
             padding:.3vw;
             cursor: pointer;
@@ -106,7 +167,7 @@
 <body>
     <div id="header">
         <nav>
-            <div id="digisign"><a href="index.html"></a></div>
+            <div id="digisign"><a href="index.html">hello</a></div>
             <div id="side">
                 <a href="shops.html" id="hoverlist">shop</a>
                 <a href="collabs.html">collabs</a>
@@ -116,19 +177,37 @@
         </nav>
     </div>
 
-    <div id="main">
-        <div>
-            <h1>About</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati animi harum accusantium minima, aperiam quis! Quaerat fugit vitae ad officiis dolore iure accusantium adipisci esse cumque eum commodi vero similique enim cupiditate voluptates, eveniet illum porro fugiat saepe blanditiis, libero reprehenderit beatae animi corrupti! Labore rem unde cum dolorum fuga a nulla, ea quasi odio laborum explicabo? Maiores ipsam dolorem ipsa perferendis sed voluptate officiis eligendi, laborum quis vel porro nam? Aliquam nam impedit cupiditate dolor quisquam? Odio excepturi sapiente labore. Velit ullam voluptatum repellat minus necessitatibus asperiores placeat atque quas deleniti.
-            </p>
-        </div>
+    
+        <div id="main">
+            <!-- first section -->
+            <div id="first">
+                <div id="right">
+                    <h1>About</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum obcaecati animi harum accusantium minima, aperiam quis! Quaerat fugit vitae ad officiis dolore iure accusantium adipisci esse cumque eum commodi vero similique enim cupiditate voluptates, eveniet illum porro fugiat saepe blanditiis, libero reprehenderit beatae animi corrupti! Labore rem unde cum dolorum fuga a nulla, ea quasi odio laborum explicabo? Maiores ipsam dolorem ipsa perferendis sed voluptate officiis eligendi, laborum quis vel porro nam? Aliquam nam impedit cupiditate dolor quisquam? Odio excepturi sapiente labore. Velit ullam voluptatum repellat minus necessitatibus asperiores placeat atque quas deleniti.
+                    </p>
+                </div>
+        
+                <div id="left">
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-fill"></i></a>
+                    <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
+                </div>
+            </div>
 
-        <div>
-            
+            <!-- second section -->
+            <div id="second">
+                <div id="image">
+                    <img src="abt-2.jpg" class="size">
+                    <img src="abt-3.jpg" class="size">
+                    <img src="abt-1.jpg" class="size">
+                </div>
+            </div>
         </div>
-    </div>
+    
+    <footer id="abt">
 
-    <div id="abt">
         <div>
             <h1>follow</h1>
         </div>
@@ -140,7 +219,7 @@
             <a href="#"><i class="ri-twitter-fill"></i></a>
             <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
         </div>
-    </div>
+    </footer>
 
     
 </body>

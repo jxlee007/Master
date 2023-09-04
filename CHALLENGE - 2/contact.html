@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Name</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap" rel="stylesheet">
+
+
+
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Nunito Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        html,body{
+            height: 0;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8vw 7.4vw 0vw;
+
+            background-color: transparent;
+            cursor: auto;
+        }
+
+        #digisign{
+            padding: 1.5vw 4vw;
+            background-color: red;
+            color: black;
+            cursor: pointer;
+        }
+
+        #side{
+            display: inline-flex;
+            justify-content: center;
+            align-items: flex-end;
+            cursor: pointer;
+        }
+
+        #side a{
+            padding: .7vw .5vw;
+            text-decoration: none;
+            color: #bdbdbd;
+            text-transform: uppercase;
+            font-size: .9vw;
+            letter-spacing: .1vw;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        #side a:hover{
+            color: lightgrey;
+        }
+
+        #main{
+            /* display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            padding: 3.7vw 7.4vw;
+            flex-wrap: wrap;
+            gap: 2vw; */
+
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            align-items: baseline;
+            padding: 3.7vw 7.4vw;
+            gap: 2vw;
+        }
+
+        #right{
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 40.5vw;
+        }
+
+        #right h1{
+            display: inline-flex;
+            font-size: 4vw;
+            font-weight: 100;
+            letter-spacing: .1vw;
+            text-transform: capitalize;
+            margin: 0;
+            padding-bottom: 1.2vw;
+        }
+
+        #left{
+            display: flex;
+            flex-direction: column;
+
+            height: 55vw;
+            width: 40vw;
+        }
+
+        #left h3{
+            font-size: 1.2vw;
+            font-weight: 400;
+            /* border: 3px solid white; */
+            margin: 0;
+            padding: .9vw 0vw;
+            padding-bottom: .3vw;
+        }
+
+        #left h5{
+            font-weight: 400;
+            margin: 0;
+            margin-top: -2vw;
+            padding-bottom: 1.5vw;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid black;
+            align-items: center;
+            align-content: flex-start;
+        }
+
+        fieldset{
+            border: none;
+        }
+
+
+        #bottom{
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            padding: .9vw;
+        }
+
+        .small{
+            font-size: .9vw;
+        }
+
+        #align{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            gap: .8vw;
+        }
+
+        .align{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            text-transform: capitalize;
+        }
+
+        button{
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+            width: 1vw;
+            color: black;
+            border: .27vw solid black; 
+            padding:15px 70px ;
+            font-size: 1.5vw;
+            text-transform: uppercase;
+            cursor: pointer;
+                }
+
+
+
+        
+
+
+
+
+
+        /* about section */
+        #abt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 9vw 7.4vw;
+            background-image: linear-gradient(rgb(245, 245, 245) ,whitesmoke);
+            cursor: pointer;
+        }
+
+        #abt h1{
+            margin: 0;
+            padding-bottom: 1.24vw;
+            text-transform: capitalize;
+            font-size: 4vw;
+            font-weight: 100;
+            letter-spacing: .2vw;
+            color: black;
+        }
+
+        #abt a{
+            text-decoration: none;
+            font-size: 1.6vw;
+            color: black;
+            padding:.3vw;
+            cursor: pointer;
+        }
+
+        #abt a:hover{
+            color: grey;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="header">
+        <nav>
+            <div id="digisign"><a href="index.html">hello</a></div>
+            <div id="side">
+                <a href="shops.html" id="hoverlist">shop</a>
+                <a href="collabs.html">collabs</a>
+                <a href="about.html">about</a>
+                <a href="contact.html">contact</a>
+            </div>
+        </nav>
+    </div>
+
+    
+    <div id="main">
+
+            <div id="right">
+                <h1>contact</h1>
+                <img src="contact.jpg">
+            </div>
+
+            <div id="left">
+                <form action="" method="post">
+                    <div id="up">
+                        <fieldset id="up">
+                            <h3>Purpose of email (required)</h3><br>
+                            <h5>select one</h5>
+                            <input type="radio" class="radio" value="Business Inquiries"><label class="small">Business Inquiries</label><br>
+                            <input type="radio" class="radio" value="Customer Service"><label class="small" >Customer Service</label><br>
+                        </fieldset>
+        
+                        <fieldset id="mid">
+                            <h3>Name (required)</h3>
+                            <div id="align">
+                                <span class="align">
+                                    <label class="small">First name</label>
+                                    <input type="text" >
+                                </span>
+                                <span class="align">
+                                    <label class="small">last name</label>
+                                    <input type="text">
+                                </span>
+                                
+                            </div>
+
+                        </fieldset>
+                    </div>
+
+    
+                    <fieldset id="bottom">
+                        <h3>Email (required)</h3>
+                        <input type="email"><br>
+    
+                        <h3>Subject / Order # (required)</h3>
+                        <input type="text"><br>
+    
+                        <h3>Message ( All Spam Will Be Ignored ) (required)</h3>
+                        <textarea name="" id="" cols="50" rows="5"></textarea>
+                    </fieldset>
+                        
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+    </div>
+
+    <footer id="abt">
+        <div>
+            <h1>follow</h1>
+        </div>
+
+        <div>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-fill"></i></a>
+            <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

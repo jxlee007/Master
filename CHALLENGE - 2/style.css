@@ -86,36 +86,35 @@ nav{
 
 
 
-  #abt{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 9vw;
-    background-color: rgb(240, 240, 240);
-    cursor: pointer;
-    bottom: 40%;
-}
+        /* about section */
+        #abt{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 9vw 7.4vw;
+            background-image: linear-gradient(rgb(245, 245, 245) ,whitesmoke);
+            cursor: pointer;
+        }
 
-#abt h1{
-    padding: 2vw ;
-    text-transform: capitalize;
-    font-size: 4vw;
-    font-weight: 100;
-    letter-spacing: .2vw;
-    color: black;
-}
+        #abt h1{
+            margin: 0;
+            padding-bottom: 1.24vw;
+            text-transform: capitalize;
+            font-size: 4vw;
+            font-weight: 100;
+            letter-spacing: .2vw;
+            color: black;
+        }
 
-#abt a{
-    text-decoration: none;
-    font-size: 1.5vw;
-    color: black;
-    padding:.3vw;
-    cursor: pointer;
-}
+        #abt a{
+            text-decoration: none;
+            font-size: 1.6vw;
+            color: black;
+            padding:.3vw;
+            cursor: pointer;
+        }
 
-#abt a:hover{
-    color: grey;
-}
+        #abt a:hover{
+            color: grey;
+        }
