@@ -63,14 +63,6 @@
         }
 
         #main{
-            /* display: flex;
-            justify-content: center;
-            flex-direction: row;
-            align-items: center;
-            padding: 3.7vw 7.4vw;
-            flex-wrap: wrap;
-            gap: 2vw; */
-
             display: flex;
             justify-content: space-evenly;
             flex-direction: row;
@@ -99,16 +91,15 @@
 
         #left{
             display: flex;
-            flex-direction: column;
-
-            height: 55vw;
-            width: 40vw;
+            /* flex-direction: column;
+            flex-wrap: wrap; */
+            /* new learning */
+            flex-flow: column;
         }
 
         #left h3{
             font-size: 1.2vw;
             font-weight: 400;
-            /* border: 3px solid white; */
             margin: 0;
             padding: .9vw 0vw;
             padding-bottom: .3vw;
@@ -124,25 +115,40 @@
         form{
             display: flex;
             flex-direction: column;
-            border: 2px solid black;
+            flex-wrap: wrap;
             align-items: center;
             align-content: flex-start;
         }
 
         fieldset{
-            border: none;
-        }
-
-
-        #bottom{
             display: flex;
-            flex-direction: column;
+            flex-flow: column; 
+            border: none;
+            padding: 1.4vw 0vw;
+            width: 40vw;
+
         }
+        
 
         input[type=text],
         input[type=email],
         textarea {
-            padding: .9vw;
+            padding: .8vw;
+            background: #fafafa;
+            border: .1vw solid lightgrey;
+        }
+
+        input[type=radio]{
+            transform: scale(1.5);
+        }
+
+        .set{
+            font-size: .9vw;
+            display: flex;
+            flex-flow: row;
+            padding: .5vw;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         .small{
@@ -166,15 +172,22 @@
         button{
             display: flex;
             justify-content: center;
-            /* align-items: center; */
-            width: 1vw;
             color: black;
-            border: .27vw solid black; 
-            padding:15px 70px ;
-            font-size: 1.5vw;
+            background-color: #fafafa;
+            border: .21vw solid black; 
+            padding:.9vw 2.5vw;
+            font-size: 1vw;
+            font-weight: 800;
+            letter-spacing: .1vw;
             text-transform: uppercase;
             cursor: pointer;
-                }
+            transition-duration: .35s;
+        }
+
+        button:hover{
+            background-color: black;
+            color: #fafafa;
+        }
 
 
 
@@ -242,17 +255,23 @@
                 <img src="contact.jpg">
             </div>
 
-            <div id="left">
+            <fieldset id="left">
                 <form action="" method="post">
-                    <div id="up">
-                        <fieldset id="up">
+                    <div>
+                        <fieldset>
                             <h3>Purpose of email (required)</h3><br>
                             <h5>select one</h5>
-                            <input type="radio" class="radio" value="Business Inquiries"><label class="small">Business Inquiries</label><br>
-                            <input type="radio" class="radio" value="Customer Service"><label class="small" >Customer Service</label><br>
+                            <div class="set"> 
+                                <input type="radio" class="radio" checked="checked value="Business Inquiries">  &nbsp;
+                                <label>Business Inquiries</label><br>
+                            </div>
+                            <div class="set">
+                                <input type="radio" class="radio" checked="checked" value="Customer Service">&nbsp;
+                                <label>Customer Service</label>
+                            </div>
                         </fieldset>
         
-                        <fieldset id="mid">
+                        <fieldset >
                             <h3>Name (required)</h3>
                             <div id="align">
                                 <span class="align">
@@ -270,7 +289,7 @@
                     </div>
 
     
-                    <fieldset id="bottom">
+                    <fieldset>
                         <h3>Email (required)</h3>
                         <input type="email"><br>
     
@@ -278,12 +297,12 @@
                         <input type="text"><br>
     
                         <h3>Message ( All Spam Will Be Ignored ) (required)</h3>
-                        <textarea name="" id="" cols="50" rows="5"></textarea>
+                        <textarea name="" id="" cols="50" rows="3"></textarea>
                     </fieldset>
                         
                     <button type="submit">submit</button>
                 </form>
-            </div>
+            </fieldset>
     </div>
 
     <footer id="abt">
