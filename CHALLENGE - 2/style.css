@@ -24,6 +24,7 @@ nav{
     padding: 3vw 6vw;
     background-color: transparent;
     cursor: auto;
+    position: relative;
 }
 
 #digisign{
@@ -63,6 +64,7 @@ nav{
 }
 
 #hoverlist:hover + #hiddenlist{
+    float: none;
     display: inline-flex;
     z-index: 5;
     align-items: flex-end;
@@ -73,6 +75,7 @@ nav{
     line-height: 1.5vw;
     font-size: .9vw;
     animation: moveToUp .3s ease-in;
+    /* pointer-events: none; */
 }
 
 @keyframes moveToUp {
