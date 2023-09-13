@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motion GFX - Name</title>
+    <title>Sounds Packs- NAME</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,12 +67,62 @@
         #main{
             display: flex;
             justify-content: space-evenly;
-            flex-direction: row;
+            flex-direction: column;
             align-items: baseline;
-            padding: 3.7vw 7.4vw;
+            padding: 3.7vw 6.9vw;
             gap: 2vw;
         }
+/* 
+        #main img{
+            filter: brightness(90%);
+        } */
 
+        #products{
+            display: flex;
+            /* background-color: blue; */
+            height: auto;
+            width: 100%;
+            justify-content: center;
+            flex-direction: row;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 1px;
+            gap: 1.7vw;
+            color: black;
+            
+        }
+
+        #products span{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* filter: brightness(110%); */
+        }
+
+        .bold{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 3vw;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            color: #fff;
+            font-size: 6vw;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .thin{
+            position: absolute;
+            text-transform: uppercase;
+            top: 50%;
+            left: 13%;
+            color: #fff;
+            font-size: 1.2vw;
+            font-weight: 300;
+            letter-spacing: .1vw;
+        }
 
         /* about section */
         #abt{
@@ -126,6 +176,18 @@
 
     
     <div id="main">
+        <img src="shop-5.jpg" alt="1143" width="100%" style="filter: brightness(90%);" >
+        <h1 class="bold">sounds pack</h1>
+        <h5 class="thin">take your edits to the next level.</h5>
+        <div id="products">
+            <span>
+                <a href="sound-pack-v1.html">
+                    <img src="PMSOUNDPACKV1.jpg" alt="">
+                </a>
+                <p>Sound Pack V1</p>
+            </span>
+        </div>
+
 
     </div>
 

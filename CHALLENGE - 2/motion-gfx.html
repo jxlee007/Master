@@ -1,11 +1,11 @@
-default nav and about sections
+<!-- default nav and about sections -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUTS - Name</title>
+    <title>Presets - Name</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,12 +67,59 @@ default nav and about sections
         #main{
             display: flex;
             justify-content: space-evenly;
-            flex-direction: row;
+            flex-direction: column;
             align-items: baseline;
-            padding: 3.7vw 7.4vw;
+            padding: 3.7vw 6.9vw;
             gap: 2vw;
         }
 
+        #main img{
+            filter: brightness(90%);
+        }
+
+        #products{
+            display: flex;
+            /* background-color: blue; */
+            height: auto;
+            flex-direction: row;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 1px;
+            gap: 1.7vw;
+            color: black;
+            
+        }
+
+        #products span{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            filter: brightness(110%);
+        }
+
+        .bold{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 3vw;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            color: #fff;
+            font-size: 6vw;
+            text-transform: uppercase;
+        }
+
+        .thin{
+            position: absolute;
+            text-transform: uppercase;
+            top: 50%;
+            left: 13%;
+            color: #fff;
+            font-size: 1.5vw;
+            font-weight: 300;
+            letter-spacing: .1vw;
+        }
 
         /* about section */
         #abt{
@@ -126,6 +173,38 @@ default nav and about sections
 
     
     <div id="main">
+        <img src="gfx-2.png" alt="1143" width="100%" >
+        <h1 class="bold">motion gfx</h1>
+        <h5 class="thin">professional titles / graphics / effects</h5>
+
+        <!-- <h5 class="thin">custom preset pack for adobe lightroom cc.</h5> -->
+        <div id="products">
+            <span>
+                <a href="film-scratches.html">
+                    <img src="ScratchBox.jpg" alt="">
+                </a>
+                <p>Film Scratches FX</p>
+            </span>
+            <span>
+                <a href="glitch-mgfx.html">
+                    <img src="GlitchBox.jpg" alt="">
+                </a>
+                <p>Glitch FX</p>
+            </span>
+            <span>
+                <a href="film-matte.html">
+                    <img src="MatteBox.jpg" alt="">
+                </a>
+                <p>Film Mattes FX</p>
+            </span>
+            <span>
+            <a href="light-leaks.html">
+                <img src="LeaksBox.jpg" alt="">
+            </a>
+                <p>Light Leaks FX</p>
+            </span>
+        </div>
+
 
     </div>
 
