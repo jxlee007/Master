@@ -1,4 +1,4 @@
-default nav and about sections
+<!-- default nav and about sections -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,13 +66,64 @@ default nav and about sections
 
         #main{
             display: flex;
-            justify-content: space-evenly;
-            flex-direction: row;
-            align-items: baseline;
-            padding: 3.7vw 7.4vw;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 3.7vw 6.9vw;
             gap: 2vw;
         }
 
+        #main img{
+            filter: brightness(90%);
+        }
+
+        #products{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            font-size: 1vw;
+            font-weight: 300;
+            letter-spacing: 1px;
+            gap: 2vw;
+            color: black;
+            /* width: fit-content; */
+            
+        }
+
+        #products span{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(110%);
+            width: 20vw;
+        }
+
+
+        .bold{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 3vw;
+            position: absolute;
+            top: 25%;
+            left: 10%;
+            color: #fff;
+            font-size: 6vw;
+            text-transform: uppercase;
+        }
+
+        .thin{
+            position: absolute;
+            text-transform: uppercase;
+            top: 50%;
+            left: 13%;
+            color: #fff;
+            font-size: 1.5vw;
+            font-weight: 300;
+            letter-spacing: .1vw;
+        }
 
         /* about section */
         #abt{
@@ -126,6 +177,26 @@ default nav and about sections
 
     
     <div id="main">
+        <img src="shop-6.jpg" alt="1143" width="100%" >
+        <h1 class="bold">gear</h1>
+        <h5 class="thin">custom gear for your camera bag</h5>
+
+        <!-- <h5 class="thin">custom preset pack for adobe lightroom cc.</h5> -->
+        <div id="products">
+            <span>
+                <a href="film-scratches.html">
+                    <img src="gear-1.jpg" alt="" width="110%">
+                </a>
+                <p>PM Camera Tool</p>
+            </span>
+            <span>
+                <a href="glitch-mgfx.html">
+                    <img src="gear-2.jpg" alt="" width="110%">
+                </a>
+                <p>Signature Lens IDs</p>
+            </span>
+        </div>
+
 
     </div>
 
@@ -139,7 +210,7 @@ default nav and about sections
             <a href="#"><i class="ri-instagram-line"></i></a>
             <a href="#"><i class="ri-facebook-fill"></i></a>
             <a href="#"><i class="ri-twitter-fill"></i></a>
-            <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
+            <a href="pirates-life.html"><i><img src="skull.png" width="14px" height="18px"></i></a>
         </div>
     </footer>
 
