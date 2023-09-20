@@ -21,20 +21,23 @@
         }
 
         html,body{
-            height: auto;
-            margin: auto;
+            height: 0;
+            /* height: 100vh; */
+            /* width: 100vw; */
+            background: url('pg-1.jpg');
+            background-size: 120%;
+            background-position: top-center;
+            background-repeat: no-repeat;
+            z-index: 1;
         }
 
         nav{
             display: flex;
-            width: 99.4%;
             justify-content: space-between;
             align-items: center;
             padding: 1.8vw 7.4vw 0vw;
             background-color: transparent;
             cursor: auto;
-            position: absolute;
-            z-index: 10;
         }
 
         #digisign{
@@ -119,26 +122,6 @@
             animation: fade-out 4s 1s ease-out forwards;
         }
 
-        /* parallax section */
-
-        #full{
-            height: 110vh;
-            filter: brightness(90%);
-            z-index: 1;
-        }
-
-        .magic{
-            height: 80vh;
-            /* width: 100%; */
-            display: flex;
-            filter: brightness(100%);
-        }
-
-        .parallax-window {
-            min-height: 400px;
-            background: transparent;
-        }
-
 
 
         /* about section */
@@ -204,16 +187,6 @@
             </div>
         </nav>
 
-        <div>
-            <div id="full" class="parallax-window" data-parallax="scroll" data-bleed="8" data-image-src="pl-1.jpg"></div>
-            <div class="magic parallax-window" data-parallax="scroll" data-bleed="0" data-image-src="pl-2.jpg"></div>
-            <div class="magic parallax-window" data-parallax="scroll" data-bleed="0" data-image-src="pl-3.jpg"></div>
-            <div class="magic parallax-window" data-parallax="scroll" data-bleed="0" data-image-src="pl-4.jpg"></div>
-            <div class="magic parallax-window" data-parallax="scroll" data-bleed="0" data-image-src="pl-5.jpg"></div>
-            <div class="magic parallax-window" data-parallax="scroll" data-bleed="0" data-image-src="pl-last.jpg"></div>
-        </div>
-
-
 
 
 
@@ -221,7 +194,7 @@
 
 
             
-                <div id="abt" class="parallax-window" data-parallax="scroll">
+                <div id="abt">
                     <div>
                         <h1>follow</h1>
                     </div>
@@ -236,10 +209,6 @@
                 </div>
             </div>
     </div>
-
-    <!-- parallax scroll using scroll -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
     
 </body>
