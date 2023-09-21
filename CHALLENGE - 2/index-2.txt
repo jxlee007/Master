@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Name</title>
+    <title>Store</title>
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,6 @@
         }
 
         #side a{
-            display: flex;
             padding: .7vw .5vw;
             text-decoration: none;
             color: #bdbdbd;
@@ -63,8 +62,8 @@
             color: lightgrey;
         }
 
-         /* hoverlist section */
-         #hiddenlist{
+        /* hoverlist section */
+        #hiddenlist{
             display: none;
             opacity: 0;
             transition: opacity 0.5s;
@@ -84,7 +83,6 @@
             opacity: 1;
             position: absolute;
             transition-duration: .4s;
-            z-index: 999;
         }
 
         #list #hiddenlist a:hover{
@@ -125,134 +123,60 @@
         }
 
 
-        #main{
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: row;
-            align-items: baseline;
-            padding: 3.7vw 7.4vw;
-            gap: 2vw;
-        }
-
-        #right{
-            /* background-color: blue; */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            width: 40.5vw;
-        }
-
-        #right h1{
-            display: inline-flex;
-            font-size: 4vw;
-            font-weight: 100;
-            letter-spacing: .1vw;
-            text-transform: capitalize;
-            margin: 0;
-            padding-bottom: 1.2vw;
-        }
-
-        #left{
-            display: flex;
-            /* flex-direction: column;
-            flex-wrap: wrap; */
-            /* new learning */
-            flex-flow: column;
-        }
-
-        #left h3{
-            font-size: 1.2vw;
-            font-weight: 400;
-            margin: 0;
-            padding: .9vw 0vw;
-            padding-bottom: .3vw;
-        }
-
-        #left h5{
-            font-weight: 400;
-            margin: 0;
-            margin-top: -2vw;
-            padding-bottom: 1.5vw;
-        }
-
-        form{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
-            align-content: flex-start;
-        }
-
-        fieldset{
-            display: flex;
-            flex-flow: column; 
-            border: none;
-            padding: 1.4vw 0vw;
-            width: 40vw;
-
-        }
-        
-
-        input[type=text],
-        input[type=email],
-        textarea {
-            padding: .8vw;
-            background: #fafafa;
-            border: .1vw solid lightgrey;
-        }
-
-        input[type=radio]{
-            transform: scale(1.5);
-            accent-color: black;
-        }
-
-        .set{
-            font-size: .9vw;
-            display: flex;
-            flex-flow: row;
-            padding: .5vw;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .small{
-            font-size: .9vw;
-        }
-
-        #align{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            gap: .8vw;
-        }
-
-        .align{
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            text-transform: capitalize;
-        }
-
-        button{
+        #main h2{
             display: flex;
             justify-content: center;
             color: black;
-            background-color: #fafafa;
-            border: .21vw solid black; 
-            padding:.9vw 2.5vw;
-            font-size: 1vw;
-            font-weight: 800;
-            letter-spacing: .1vw;
             text-transform: uppercase;
-            cursor: pointer;
-            transition-duration: .35s;
+            padding: .8vw;
+            font-size: 1.9vw;
+            letter-spacing: 1px;
+            font-weight: 500;
         }
 
-        button:hover{
-            background-color: black;
-            color: #fafafa;
+        #main img{
+            width: 89%;
+            filter: brightness(90%);
         }
 
+        .img{
+            display: flex;
+            justify-content: center;
+            z-index: 1;
+            padding: 2vw;
+            position: relative;
+        }
+
+        .img a{
+            display: flex;
+            justify-content: center;
+            /* background-color: red; */
+        }
+
+        .bold{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2vw;
+            position: absolute;
+            top: 17%;
+            left: 15%;
+            color: #fff;
+            font-size: 6vw;
+            font-weight: 800;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .thin{
+            position: absolute;
+            text-transform: uppercase;
+            top: 55%;
+            left: 17.5%;
+            color: #fff;
+            font-size: 1.2vw;
+            font-weight: 300;
+        }
 
         /* about section */
         #abt{
@@ -316,65 +240,52 @@
         </nav>
     </div>
 
-    
     <div id="main">
 
-            <div id="right">
-                <h1>contact</h1>
-                <img src="contact.jpg">
-            </div>
+        <div class="img">
+            <a href="photo-preset.html"><img src="shop-1.jpg"></a>
+            <h1 class="bold">photo presets</h1>
+            <h5 class="thin">custom preset pack for adobe lightroom cc.</h5>
+        </div>
 
-            <fieldset id="left">
-                <form action="" method="post">
-                    <div>
-                        <fieldset>
-                            <h3>Purpose of email (required)</h3><br>
-                            <h5>select one</h5>
-                            <div class="set"> 
-                                <input type="radio" name="sel" class="radio" id="Business Inquiries" >  &nbsp;
-                                <label for="Business Inquiries">Business Inquiries</label><br>
-                            </div>
-                            <div class="set">
-                                <input type="radio" name="sel" class="radio" id="Customer Service">&nbsp;
-                                <label for="Customer Service">Customer Service</label>
-                            </div>
-                        </fieldset>
-        
-                        <fieldset >
-                            <h3>Name (required)</h3>
-                            <div id="align">
-                                <span class="align">
-                                    <label class="small">First name</label>
-                                    <input type="text" >
-                                </span>
-                                <span class="align">
-                                    <label class="small">last name</label>
-                                    <input type="text">
-                                </span>
-                                
-                            </div>
+        <div class="img">
+            <a href="prints.html"><img src="shop-2.jpg"></a>
+            <h1 class="bold">pm prints</h1>
+            <h5 class="thin">limited edition archival prints.</h5>
+        </div>
 
-                        </fieldset>
-                    </div>
+        <div class="img">
+            <a href="motion-gfx.html"><img src="shop-3.jpg"></a>
+            <h1 class="bold">motion gfx</h1>
+            <h5 class="thin">4 custom packs of effects for videos</h5>
+        </div>
 
-    
-                    <fieldset>
-                        <h3>Email (required)</h3>
-                        <input type="email"><br>
-    
-                        <h3>Subject / Order # (required)</h3>
-                        <input type="text"><br>
-    
-                        <h3>Message ( All Spam Will Be Ignored ) (required)</h3>
-                        <textarea name="" id="" cols="50" rows="3"></textarea>
-                    </fieldset>
-                        
-                    <button type="submit">submit</button>
-                </form>
-            </fieldset>
+        <div class="img">
+            <a href="luts.html"><img src="shop-4.jpg"></a>
+            <h1 class="bold">video luts</h1>
+            <h5 class="thin">color gradient tools for adobe premiere cc, fcpx, ae.</h5>
+        </div>
+
+        <div class="img">
+            <a href="sound-packs.html"><img src="shop-5.jpg"></a>
+            <h1 class="bold">sound packs</h1>
+            <h5 class="thin">killer sounds to take your project to the next level.</h5>
+        </div>
+
+        <div class="img">
+            <a href="gear.html"><img src="shop-6.jpg"></a>
+            <h1 class="bold">pm gear</h1>
+            <h5 class="thin">custom made products.</h5>
+        </div>
+
+        <div class="img">
+            <a href="pirates-life.html" target="_blank"><img src="shop-7.jpg"></a>
+            <h1 class="bold">jack's pirate life</h1>
+            <h5 class="thin">limited edition drops - fly the flag.</h5>
+        </div>
     </div>
 
-    <footer id="abt">
+    <div id="abt">
         <div>
             <h1>follow</h1>
         </div>
@@ -386,7 +297,7 @@
             <a href="#"><i class="ri-twitter-fill"></i></a>
             <a href="#"><i><img src="skull.png" width="14px" height="18px"></i></a>
         </div>
-    </footer>
+    </div>
 
     
 </body>
