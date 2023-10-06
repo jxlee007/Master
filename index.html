@@ -3,26 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROJECTS</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>PERSONAL-BLOG</title>
 
 
+    <style>
+        *{
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body,html{
+            margin: 0;
+            padding: 0;
+            height: auto;
+            width: 100%;
+            background: rgb(63,94,251);
+            background-color: rgb(173, 5, 159);
+        }
+
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 2vw 3vw;
+            margin: 3vw;
+            border-radius: 9vw;
+            background-color: rgba(255, 255, 255, 0.274);
+            gap: 11vw;
+            
+        }
+
+        #right{
+            display: flex;
+            width: 20vw;
+            
+        }
+
+        nav{
+            background-color: transparent;
+            padding: 1vw 2vw;
+            border: .1vw solid white;
+            border-radius: 3vw;
+        }
+
+        nav > a{
+            text-decoration: none;
+            text-transform: capitalize;
+            color: white;
+            padding: 1vw 2vw;
+            font-weight: 600;
+        }
+
+        nav > a:hover{
+            background-color: rgb(136,4,124);
+            color: white;
+            border-radius: 2vw;
+            transition: .3s ease-in-out;
+        }
+
+        #left{
+            display: flex;
+            width: 15vw;
+            
+        }
+
+        #intro{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0vw 2vw;
+        }
+
+        .right{
+            display: flex;
+            color: antiquewhite;
+            margin: 0vw 1vw 0vw 6vw;
+            font-size: 2vw;
+        }
+
+        .left{
+            display: flex;
+            margin: 0vw 4vw;
+        }
+
+        .left > img{
+            border-radius: 2vw;
+        }
+
+        #gallery{
+            display: flex;
+            flex-direction: column;
+            margin: 3vw 5vw;
+        }
+
+        #gallery > span{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        #gallery > span .box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.473);
+            padding: 0vw 0vw 2vw;
+            margin: 2vw;
+            color: antiquewhite;
+            border-radius: 2vw;
+        }
+
+        .box img{
+            border-radius: 2vw;
+        }
+
+        .box h3{
+            display:flex;
+            width: 34vw;
+        }
+
+        .box a{
+            text-decoration: none;
+            background-color: blueviolet;
+            color: antiquewhite;
+            padding: 0vw 1vw;
+            border-radius: 3vw;
+        }
+
+        .box a:hover{
+            color: antiquewhite;
+            background-color: black;
+            transition-duration: .3s;
+        }
+
+        #about{
+            display: flex;
+            background-color: rgba(255, 255, 255, 0.411);
+            margin: 1vw 0vw;
+            padding: 3vw 0vw;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #about span{
+            display: flex;
+            flex-direction: column;
+            color: antiquewhite;
+            margin: 1vw;
+            width: 30vw;
+        }
+
+        #about img {
+            border-radius: 2vw;
+        }
+
+        #contact{
+            margin: 3vw 0vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #contact img{
+            border-radius: 2vw;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.274);
+            border-radius: 2vw;
+            color: white;
+            width: 40vw;
+        }
+
+        input[type=text],
+        input[type=email]{
+            border: .2vw solid black;
+            padding: 1.3vw 0vw;
+            padding-right: 8vw;
+            padding-left: 1vw;
+            margin: .3vw 0vw;
+            border-radius: 1vw;
+        }
+
+        form #dialog{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 1vw;
+            border: .2vw solid black;
+            border-radius: 2vw;
+            overflow: hidden;
+            background-color: white;
+            color: black;
+        }
+
+        form span{
+            display: flex;
+            flex-direction: row;
+        }
+
+        form span > button{
+            padding: 1vw 6vw;
+            background-color: white;
+            border: .1vw solid black;
+        }
+
+        form #link{
+            display: flex;
+            flex-direction: row;
+            margin-top: 1vw;
+        }
+
+        form #link a{
+            margin: 1vw;
+            padding: 1vw 1.5vw;
+            border-radius: 2vw;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: darkblue;
+            color: antiquewhite;
+        }
+
+    </style>
 
 </head>
-
 <body>
-    <header> 
-        <h1>Jagmohan Singh Malhi</h1>
-        <nav>
-            <a href="#">projects</a>
-            <a href="#"">passion & interest</a>
-            <a href="#">about</a>
-            <a href="#">contact</a>
-        </nav>
-    </header>
-    <main></main>
-    <footer></footer>
-</body>
+    <header>
+        <a  href="#"><img id="right"src="DS1-white.png" alt="logo"></a>
 
+        <nav>
+            <a href="#gallery">projects</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <img id="left" src="Picsart_23-10-06_11-25-53-454.png" alt="image for portfolio" width="100px">
+    </header>
+
+    <section id="intro">
+        <div class="right"> 
+            <h1>Hello👋! <br>I am Jagmohan Singh Malhi <br> And I am a <br> Front-end web developer</h1>
+        </div>
+
+        <div class="left">
+            <img src="Screenshot 2023-10-06 120730.png" alt="projects" width="600px">
+        </div>
+    </section>
+
+    <section id="gallery">
+        <span>
+            <div class="box">
+                <img src="Screenshot 2023-10-06 120730.png" alt="project-1" width="500px" height="256px">
+                <h4>A Portfolio website<br>(clone of landing page of award winning website)</h4>
+                <a href="https://project-1-jms.netlify.app/" target="_blank"><p>PROJECT-1</p></a>
+            </div>
+            <div class="box">
+                <img src="project-2-ss.png" alt="project-2" width="500px" height="256px">
+                <h4>Photography YouTuber's Web Replica <br>(Parallax, Smooth Loading, CSS Wizardry, Mobile-Friendly Cart) </h4>
+                <a href="https://project-2-jms.netlify.app/" target="_blank"><p>PROJECT-2</p></a>
+            </div>
+        </span>
+
+        <!-- <span>
+            <div class="box">
+                <img src="" alt="">
+                <h3></h3>
+                <a href="http://" target="_blank"></a>
+            </div>
+            <div class="box">
+                <img src="" alt="">
+                <h3></h3>
+                <a href="http://" target="_blank"></a>
+            </div>
+        </span> -->
+
+    </section>
+
+    <section id="about">
+        <span>
+            <h2>I am a Creative Front-end web developer with<br>Good understanding of Modern-day Approach</h2>
+            <p>I thrive on creating inventive and user-friendly web solutions, collaborating on exciting projects, and using my expertise to craft visually appealing and responsive web interfaces. My goal is to continually learn and evolve, making a meaningful impact within innovative teams.            
+            </p>
+        </span>
+        <img src="design.png" alt="pattern" width="500px" height="500px">
+    </section>
+
+    <section id="contact">
+        <img src="contact.jpg" alt="contact me" width="500px">
+        <form action="">
+            <h1>Get in Touch !</h1>
+            <input type="text" placeholder="Name">
+            <input type="email" name="email" id="" placeholder="Email">
+
+            <div id="dialog">
+                <h3>Message</h3>
+                <textarea name="messages" id="" cols="50" rows="5" placeholder="Write message"></textarea>
+                <span>
+                    <button type="button">OK</button>
+                    <button type="button">Cancel</button>
+                </span>
+            </div>  
+
+            <div id="link">
+                <a href="#" target="_blank">instagram</a>
+                <a href="https://www.linkedin.com/in/jagmohan-singh-malhi-a67805243/" target="_blank">linkedin</a>
+                <a href="https://github.com/jxlee007" target="_blank">github</a>
+            </div>
+        </form>
+
+       
+
+    </section>
+
+</body>
 </html>
