@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERSONAL-BLOG</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 
     <style>
         *{
             box-sizing: border-box;
             scroll-behavior: smooth;
+            font-family: 'Montserrat', sans-serif;
         }
 
         body,html{
@@ -17,26 +22,26 @@
             padding: 0;
             height: auto;
             width: 100%;
-            background: rgb(63,94,251);
-            background-color: rgb(173, 5, 159);
+            /* background: ; */
+            background-color: #17b705;
         }
 
         header{
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            padding: 2vw 3vw;
+            padding: .5vw 3vw;
             margin: 3vw;
             border-radius: 9vw;
-            background-color: rgba(255, 255, 255, 0.274);
+            background-color: rgba(4, 123, 4, 0.555);
             gap: 11vw;
             
         }
 
         #right{
             display: flex;
-            width: 20vw;
+            width: 10vw;
             
         }
 
@@ -56,7 +61,7 @@
         }
 
         nav > a:hover{
-            background-color: rgb(136,4,124);
+            background-color: darkgreen;
             color: white;
             border-radius: 2vw;
             transition: .3s ease-in-out;
@@ -65,7 +70,6 @@
         #left{
             display: flex;
             width: 15vw;
-            
         }
 
         #intro{
@@ -108,26 +112,27 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.473);
+            background-color: #28242c;
             padding: 0vw 0vw 2vw;
             margin: 2vw;
             color: antiquewhite;
-            border-radius: 2vw;
+            border: .9vw solid #38fcac ;
+            border-radius: 2.9vw;
         }
 
         .box img{
             border-radius: 2vw;
         }
 
-        .box h3{
+        .box h2{
             display:flex;
             width: 34vw;
         }
 
         .box a{
             text-decoration: none;
-            background-color: blueviolet;
-            color: antiquewhite;
+            background-color: #38fcac;
+            color: black;
             padding: 0vw 1vw;
             border-radius: 3vw;
         }
@@ -140,12 +145,13 @@
 
         #about{
             display: flex;
-            background-color: rgba(255, 255, 255, 0.411);
-            margin: 1vw 0vw;
-            padding: 3vw 0vw;
+            background-color: #28242c;
+            margin: 8vw 0vw;
+            padding: 6vw 0vw;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
+            gap: 5vw;
         }
 
         #about span{
@@ -153,11 +159,16 @@
             flex-direction: column;
             color: antiquewhite;
             margin: 1vw;
-            width: 30vw;
+            width: 40vw;
+        }
+
+        #about h1{
+            font-size: 2.5vw;
         }
 
         #about img {
-            border-radius: 2vw;
+            display: flex;
+            width: auto;
         }
 
         #contact{
@@ -168,16 +179,25 @@
             align-items: center;
         }
 
+        #contact .head{
+            font-size: 3vw;
+            padding: 0;
+            margin: .4vw;
+        }
+
         #contact img{
+            object-fit: contain;
+            width: 45vw;
             border-radius: 2vw;
         }
 
         form{
+            padding: 1vw 0vw;
             display: flex;
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.274);
+            background-color: #28242c;
             border-radius: 2vw;
             color: white;
             width: 40vw;
@@ -187,7 +207,7 @@
         input[type=email]{
             border: .2vw solid black;
             padding: 1.3vw 0vw;
-            padding-right: 8vw;
+            padding-right: 15vw;
             padding-left: 1vw;
             margin: .3vw 0vw;
             border-radius: 1vw;
@@ -205,6 +225,7 @@
             background-color: white;
             color: black;
         }
+        
 
         form span{
             display: flex;
@@ -244,6 +265,179 @@
             border-left: .5vw solid white ;
         }
 
+        @media (max-width: 767px) {
+
+    body,html{
+        display: flex;
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Header and Navigation */
+    header {
+        display: flex;
+        justify-content: left;
+        padding: .2vw 2vw;
+        margin: 2vw;
+        border-radius: 10vw;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #right{
+            display: flex;
+            width: 25vw;
+        }
+
+    #left{
+        display: none;
+    }
+
+    /* Introduction Section */
+
+    #intro{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+    .right {
+        font-size: 4vw;
+        margin: 0;
+    }
+
+    .left{
+        display: none;
+    }
+
+    /* Gallery Section */
+    #gallery span {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #gallery > span .box{
+        border-radius: 4vw;
+        overflow: hidden;
+    }
+
+    .box img {
+        width: 75vw;
+        height: fit-content;
+        border-radius: 4vw;
+    }
+
+    .box h4{
+            display:flex;
+            width: 60vw;
+        }
+
+    .box ul{
+        justify-content: left;
+        list-style-type: "⇒ ";
+    }
+
+    .box a{
+        margin: 1vw 0vw;
+        padding: .3vw 9vw ;
+        border-radius: 5vw;
+    }
+
+    /* About Section */
+
+    #about{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10vw;
+        border-radius: 10vw;
+        width: 80vw;
+        /* padding: 0; */
+    }
+    #about span{
+        display: flex;
+        justify-content: left;
+        width: auto;
+        padding: 1vw 4vw;
+    }
+
+    #about h1{
+        font-size: 4.2vw;
+    }
+
+    #about img{
+        margin-top: 3vw;
+        height: 60vw;
+        width: 60vw;
+    }
+
+    /* Contact Section */
+
+    #contact{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        border-radius: 8vw;
+    }
+
+    #contact .head{
+        font-size: 9vw;
+        margin: 6vw 0vw;
+    }
+
+    #contact form {
+        width: auto;
+    }
+
+    #contact img{
+           display: none;
+        }
+
+
+    #link {
+        flex-direction: column;
+    }
+
+        form #dialog{
+            width: 70vw;
+            border-radius: 5vw;
+        }
+
+        form span > button{
+            padding: 2vw 15vw;
+            border-top: none;
+            border-bottom: none;
+            background-color: white;
+            border: .1vw solid black;
+        }
+
+        form #link{
+            display: flex;
+            flex-direction: row;
+            margin-top: 1vw;
+        }
+
+        form #link a{
+            margin: 5vw 2vw;
+            border-radius: 2vw;
+            border-bottom: 1vw solid black ;
+            border-left: 1vw solid black ;
+            border-bottom-left-radius: 2vw;
+        }
+
+
+}
+
+
     </style>
 
 </head>
@@ -256,13 +450,11 @@
             <a href="#about">about</a>
             <a href="#contact">contact</a>
         </nav>
-
-        <img id="left" src="Picsart_23-10-06_11-25-53-454.png" alt="image for portfolio" width="100px">
     </header>
 
     <section id="intro">
         <div class="right"> 
-            <h1>Hello👋! <br>I am Jagmohan Singh Malhi <br> And I am a <br> Front-end web developer</h1>
+            <h1>Hello👋! I am<br>Jagmohan Singh Malhi <br> And I am a <br> Front-end web developer</h1>
         </div>
 
         <div class="left">
@@ -274,12 +466,29 @@
         <span>
             <div class="box">
                 <img src="Screenshot 2023-10-06 120730.png" alt="project-1" width="500px" height="256px">
-                <h4>A Portfolio website<br>(clone of landing page of award winning website)</h4>
+                <span>
+                    <h2>A Portfolio website</h2>
+                    <ul>
+                        <li>Landing page Clone</li>
+                        <li>Gsap animation</li>
+                        <li>Awwwards Website</li>
+                        <li>Mobile-Responsive</li>
+                    </ul>
+                </span>
+                
                 <a href="https://project-1-jms.netlify.app/" target="_blank"><p>PROJECT-1</p></a>
             </div>
             <div class="box">
                 <img src="project-2-ss.png" alt="project-2" width="500px" height="256px">
-                <h4>Photography YouTuber's Web Replica <br>(Parallax, Smooth Loading, CSS Wizardry, Mobile-Friendly Cart) </h4>
+                <span>
+                    <h2>Photography YouTuber's Web Replica</h2>
+                <ul>
+                    <li>Parallax Scrolling</li>
+                    <li>Smooth Loading</li>
+                    <li>Cart system using JS</li>
+                    <li>Mobile-Responsive</li>
+                </ul>
+                </span>
                 <a href="https://project-2-jms.netlify.app/" target="_blank"><p>PROJECT-2</p></a>
             </div>
         </span>
@@ -300,24 +509,23 @@
     </section>
 
     <section id="about">
+        <img src="Picsart_23-10-06_11-25-53-454.png" id="mobile" alt="image for portfolio" width="400px" height="400px">
         <span>
-            <h2>I am a Creative Front-end web developer with<br>Good understanding of Modern-day Approach</h2>
+            <h1>I am a Creative Front-end web developer with<br>Good understanding of Modern-day Approach</h1>
             <p>I thrive on creating inventive and user-friendly web solutions, collaborating on exciting projects, and using my expertise to craft visually appealing and responsive web interfaces. My goal is to continually learn and evolve, making a meaningful impact within innovative teams.            
             </p>
         </span>
-        <img src="design.png" alt="pattern" width="500px" height="500px">
     </section>
 
     <section id="contact">
-        <img src="contact.jpg" alt="contact me" width="500px">
         <form action="">
-            <h1>Get in Touch !</h1>
+            <h1 class="head">Get in Touch !</h1>
             <input type="text" placeholder="Name">
             <input type="email" name="email" id="" placeholder="Email">
 
             <div id="dialog">
-                <h3>Message</h3>
-                <textarea name="messages" id="" cols="50" rows="5" placeholder="Write message"></textarea>
+                <h1>Message</h1>
+                <textarea name="messages" cols="52" rows="5" placeholder="Write message"></textarea>
                 <span>
                     <button type="button">OK</button>
                     <button type="button">Cancel</button>
@@ -330,6 +538,8 @@
                 <a href="https://github.com/jxlee007" target="_blank">github</a>
             </div>
         </form>
+
+        <img src="contact us.jpg" alt="contact me" width="600px" >
 
        
 
