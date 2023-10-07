@@ -22,7 +22,6 @@
             padding: 0;
             height: auto;
             width: 100%;
-            /* background: ; */
             background-color: #17b705;
         }
 
@@ -50,6 +49,7 @@
         }
 
         /* added changes */
+
         .sidenav{
             height: 100vh;
             width: 0;
@@ -62,15 +62,17 @@
             padding-top: 60px;
         }
 
-        .sidenav a{
+        #sidebar a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             margin: auto;
-            margin-left: 10%;
-            padding: 8px;
-            width: fit-content;
-            display: block;
+            padding: 5vw 0vw;
             transition: 0.3s;
             text-decoration: none;
-            font-size: 1.5vw;
+            text-transform: capitalize;
+            font-size: 10vw;
             color: #fff;
         }
 
@@ -358,6 +360,13 @@
         position: fixed;
         z-index: 10000;
         width: 100%; /* Open sidebar with 100% width on small screens */
+    }
+
+    #sidebar .sidenav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .sidenav a {
