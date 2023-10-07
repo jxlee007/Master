@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'General Sans', sans-serif;
+}
+
+/* Set global styles for the HTML and body elements */
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    font-family: 'General Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+#nav {
+    width: 100%;
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#nav #name{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styles for navigation headings */
+#nav h3 {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+/* added changes */
+.sidenav{
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: conic-gradient( darkgrey, grey, black);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a{
+    margin: auto;
+    margin-left: 10%;
+    padding: 8px;
+    width: fit-content;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    font-size: 1.5vw;
+    color: #fff;
+}
+
+.sidenav a:hover{
+    color: silver;
+}
+
+.sidenav .closebtn:hover{
+    color: black;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+    color: white;
+    font-size: 2.5vw;
+    }
+
+    /* making website mobile responsive */
+/* Example media query for small screens (up to 768px) */
+@media (max-width: 768px) {
+
+    .sidenav.open {
+        position: fixed;
+        z-index: 10000;
+        width: 100%; /* Open sidebar with 100% width on small screens */
+    }
+
+    .sidenav a {
+        font-size: 6vw; /* Adjust font size for small screens */
+    }
+
+    #sidebar .closebtn{
+        font-size: 10vw;
+    }
+
+
+}
+
+    </style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <a href="#" id ="name">Jagmohan singh malhi</a>
+         <!-- added change -->
+        <div id="sidebar" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+        <!--This is HTML code for creating a close button with an "X" symbol inside it. 
+            The `href="javascript:void(0)"` part indicates that clicking the link won't navigate to a new page.
+            The `class="closebtn"` attribute assigns a CSS class to the link, and 
+            the `onclick="closeNav()"` attribute specifies that when the link is clicked, 
+            the JavaScript function `closeNav()` will be called. 
+            This is commonly used to close navigation menus or modal dialogs on a web page.
+            A modal dialog is a temporary window or pop-up that appears on top of the main content of a webpage or application.-->
+    
+            <a href="#" >About</a>
+            <a href="#" >Services</a>
+            <a href="#" >Clients</a>
+            <a href="#" >Contacts</a>
+        </div>   
+    
+        <span   style="font-size: 30px;cursor: pointer;" 
+                onclick="openNav()"><h3> MENU &#9774;</h3></span>
+    </div>
+
+    <script>
+        function openNav() {
+    var sidebar = document.getElementById("sidebar");
+
+    if (window.innerWidth < 769) {
+        sidebar.style.width = "100%"; // Open sidebar with 100% width on mobile
+    }
+}
+
+function closeNav() {
+    var sidebar = document.getElementById("sidebar");
+    sidebar.style.width = "0"; // Close sidebar by setting width to 0
+}
+
+    </script>
+
+</body>
+
+</html>

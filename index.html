@@ -45,47 +45,53 @@
             
         }
 
-        .nav{
+        #nav{
             display: none;
         }
 
-        .nav{
-            height: 100%;
-            width:0;
+        /* added changes */
+        .sidenav{
+            height: 100vh;
+            width: 0;
             position: fixed;
             top: 0;
-            left: 0;
-            background-color: #fff;
-            /* to apply gradient property we use bg image not bg color */
-            /* background-image:  linear-gradient(red, yellow); */
-            background-image: conic-gradient(red, yellow, green, blue, darkblue);
+            right: 0;
+            background-color: #28242c;
             overflow-x: hidden;
             transition: 0.5s;
             padding-top: 60px;
         }
 
-        .nav a{
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: white;
+        .sidenav a{
+            margin: auto;
+            margin-left: 10%;
+            padding: 8px;
+            width: fit-content;
             display: block;
             transition: 0.3s;
+            text-decoration: none;
+            font-size: 1.5vw;
+            color: #fff;
         }
 
-        .nav a:hover {
-            color: yellow;
+        .sidenav a:hover{
+            color: #17b705;
         }
 
-        .nav .closebtn {
+        .sidenav .closebtn:hover{
+            color: #17b705;
+        }
+
+        .sidenav .closebtn {
             position: absolute;
             top: 0;
             right: 25px;
-            font-size: 36px;
             margin-left: 50px;
+            color: white;
+            font-size: 2.5vw;
             }
 
-
+        /* navigation desktop */
         nav{
             background-color: transparent;
             padding: 1vw 2vw;
@@ -316,68 +322,51 @@
         justify-content: center;
     }
 
+    .no-select{
+    -webkit-tap-highlight-color: transparent; 
+}
+
 
     /* Header and Navigation */
     header {
         display: flex;
-        justify-content: left;
-        padding: .2vw 2vw;
+        justify-content: space-between;
+        width: 90%;
+        padding: 0vw 2vw;
         margin: 2vw;
-        border-radius: 10vw;
+        border-radius: 15vw;
     }
 
     nav {
         display: none;
     }
 
+    #nav {
+        display: flex;
+    }
 
-    /* The sidepanel menu */
-.sidepanel {
-  height: auto; /* Specify a height */
-  width: 100%; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-}
+    #nav span h3{
+        font-size: 7vw;
+        background-color: #28242c;
+        color: #38fcac;
+        padding: 4vw 6vw;
+        margin-right: 5vw;
+        border-radius: 10vw;
+    }
 
-/* The sidepanel links */
-.sidepanel a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+    .sidenav.open {
+        position: fixed;
+        z-index: 10000;
+        width: 100%; /* Open sidebar with 100% width on small screens */
+    }
 
-/* When you mouse over the navigation links, change their color */
-.sidepanel a:hover {
-  color: #f1f1f1;
-}
+    .sidenav a {
+        font-size: 6vw; /* Adjust font size for small screens */
+    }
 
-/* Position and style the close button (top right corner) */
-.sidepanel .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style the button that is used to open the sidepanel */
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 19px;
-  border-radius: 10vw;
-}
+    #sidebar .closebtn{
+        font-size: 10vw;
+    }
 
     #right{
             display: flex;
@@ -541,16 +530,20 @@
 </head>
 <body>
     <header>
-        <a  href="#"><img id="right"src="DS1-white.png" alt="logo"></a>
+        <a  href="#" class="no-select"><img id="right"src="DS1-white.png" alt="logo"></a>
 
-        <div id="nav" class="sidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#gallery">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+        <div id="nav" class="no-select">
+             <!-- added change -->
+            <div id="sidebar" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> &times; </a>
+                <a href="#gallery">projects</a>
+                <a href="#about">about</a>
+                <a href="#contact">contact</a>
+            </div>   
+        
+            <span   style="font-size: 30px;cursor: pointer;" 
+                    onclick="openNav()"><h3>&#9776;</h3></span>
         </div>
-
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
 
         <nav>
             <a href="#gallery">projects</a>
@@ -570,7 +563,7 @@
         </div>
     </section>
 
-    <section id="gallery">
+    <section id="gallery" class="no-select">
         <span>
             <div class="box">
                 <img src="Screenshot 2023-10-06 120730.png" alt="project-1" width="500px" height="256px">
@@ -625,7 +618,7 @@
         </span>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="no-select">
         <form action="">
             <h1 class="head">Get in Touch !</h1>
             <input type="text" placeholder="Name">
@@ -652,13 +645,17 @@
 
     <script>
         function openNav() {
-            document.getElementById("nav").style.width = "40%";
-    }
+    var sidebar = document.getElementById("sidebar");
 
-/* Set the width of the sidebar to 0 (hide it) */
-        function closeNav() {
-            document.getElementById("nav").style.width = "0";   
-        }
+    if (window.innerWidth < 769) {
+        sidebar.style.width = "100%"; // Open sidebar with 100% width on mobile
+    }
+}
+
+function closeNav() {
+    var sidebar = document.getElementById("sidebar");
+    sidebar.style.width = "0"; // Close sidebar by setting width to 0
+}
     </script>
 
 </body>
