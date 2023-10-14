@@ -36,8 +36,9 @@
     }
 
     #gallery{
-        height: 65vh;
+        height: 70vh;
         width: fit-content;
+        margin-bottom: -25vw;
     }
 
     #gallery .box{
