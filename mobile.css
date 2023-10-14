@@ -38,7 +38,7 @@
     #gallery{
         height: 70vh;
         width: fit-content;
-        margin-bottom: -30vw;
+        margin-bottom: -20vw;
     }
 
     #gallery .box{
@@ -69,21 +69,19 @@
             font-size: 5vw;
         }
 
-    
-        
     #gallery .box ul{
         justify-content: left;
         list-style-type: "⇒ ";
         font-size: 3vw;
-            }
-        
+    }
+
     #gallery .box a{
         margin: 1vw 0vw;
         padding: .1vw 9vw ;
         border-radius: 5vw;
         font-size: 3vw;
         font-weight: 600;
-            }
+    }
 
     .no-select{
     -webkit-tap-highlight-color: transparent; 
@@ -149,7 +147,7 @@ display: none;
 
     /* Introduction Section */
 
-    #intro{
+#intro{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -157,12 +155,12 @@ display: none;
 }
 
     .right {
-font-size: 4vw;
-margin: 0;
+        font-size: 4vw;
+        margin: 0;
     }
 
     .left{
-display: none;
+        display: none;
     }
     
 /* 
@@ -200,57 +198,57 @@ padding: .3vw 9vw ;
 border-radius: 5vw;
     }
  */
-    /* About Section */
+/* About Section */
 
     #about{
-flex-direction: column;
-align-items: center;
-margin-top: 2vw; 
-border-radius: 10vw;
-width: 80vw;
+        flex-direction: column;
+        align-items: center;
+        /* margin-top: 5vw; */
+        border-radius: 10vw;
+        width: 80vw;
     }
 
 #about span{
-display: flex;
-justify-content: left;
-width: auto;
-padding: 1vw 4vw;
+        display: flex;
+        justify-content: left;
+        width: auto;
+        padding: 1vw 4vw;
     }
 
 #about h1{
-font-size: 4.2vw;
+        font-size: 4.2vw;
     }
 
     #about img{
-margin-top: 3vw;
-height: 60vw;
-width: 60vw;
+        margin-top: 3vw;
+        height: 60vw;
+        width: 60vw;
     }
 
     /* Contact Section */
 
     #contact{
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: auto;
-height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        height: auto;
     }
 
     #contact .head{
-font-size: 9vw;
-margin: 6vw 0vw;
+        font-size: 9vw;
+        margin: 6vw 0vw;
     }
 
-    #contact form {
-padding: 0vw 4vw 2vw;
-border-radius: 10vw;
-width: auto;
-    }
+#contact form {
+    padding: 0vw 4vw 2vw;
+    border-radius: 10vw;
+    width: auto;
+}
 
-    #contact img{
-   display: none;
+#contact img{
+    display: none;
 }
 
 input[type=text],
