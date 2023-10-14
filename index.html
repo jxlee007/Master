@@ -9,533 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 
-    <style>
-        *{
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            font-family: 'Montserrat', sans-serif;
-        }
 
-        body,html{
-            margin: 0;
-            padding: 0;
-            height: auto;
-            width: 100%;
-            background-color: #17b705;
-        }
 
-        header{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: .5vw 3vw;
-            margin: 3vw;
-            border-radius: 9vw;
-            background-color: rgba(4, 123, 4, 0.555);
-            gap: 11vw;
-            
-        }
 
-        #right{
-            display: flex;
-            width: 10vw;
-            
-        }
-
-        #nav{
-            display: none;
-        }
-
-        /* added changes */
-
-        .sidenav{
-            height: 100vh;
-            width: 0;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #28242c;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-
-        #sidebar a{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            padding: 5vw 0vw;
-            transition: 0.3s;
-            text-decoration: none;
-            text-transform: capitalize;
-            font-size: 10vw;
-            color: #fff;
-        }
-
-        .sidenav a:hover{
-            color: #17b705;
-        }
-
-        .sidenav .closebtn:hover{
-            color: #17b705;
-        }
-
-        .sidenav .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            margin-left: 50px;
-            color: white;
-            font-size: 2.5vw;
-            }
-
-        /* navigation desktop */
-        nav{
-            background-color: transparent;
-            padding: 1vw 2vw;
-            border: .1vw solid white;
-            border-radius: 3vw;
-        }
-
-        nav > a{
-            text-decoration: none;
-            text-transform: capitalize;
-            color: white;
-            padding: 1vw 2vw;
-            font-weight: 600;
-        }
-
-        nav > a:hover{
-            background-color: darkgreen;
-            color: white;
-            border-radius: 2vw;
-            transition: .3s ease-in-out;
-        }
-
-        #left{
-            display: flex;
-            width: 15vw;
-        }
-
-        #intro{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 0vw 2vw;
-        }
-
-        .right{
-            display: flex;
-            color: antiquewhite;
-            margin: 0vw 1vw 0vw 6vw;
-            font-size: 2vw;
-        }
-
-        .left{
-            display: flex;
-            margin: 0vw 4vw;
-        }
-
-        .left > img{
-            border-radius: 2vw;
-        }
-
-        #gallery{
-            display: flex;
-            flex-direction: column;
-            margin: 3vw 5vw;
-        }
-
-        #gallery > span{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-
-        #gallery > span .box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #28242c;
-            padding: 0vw 0vw 1vw;
-            margin: 2vw;
-            color: antiquewhite;
-            border: .9vw solid #38fcac ;
-            border-radius: 2.9vw;
-        }
-
-        .box img{
-            border-radius: 2vw;
-        }
-
-        .box h2{
-            display:flex;
-            width: 34vw;
-        }
-
-        .box a{
-            text-decoration: none;
-            background-color: #38fcac;
-            color: black;
-            padding: 0vw 1vw;
-            border-radius: 3vw;
-        }
-
-        .box a:hover{
-            color: antiquewhite;
-            background-color: black;
-            transition-duration: .3s;
-        }
-
-        #about{
-            display: flex;
-            background-color: #28242c;
-            margin: 8vw 0vw;
-            padding: 6vw 0vw;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 5vw;
-        }
-
-        #about span{
-            display: flex;
-            flex-direction: column;
-            color: antiquewhite;
-            margin: 1vw;
-            width: 40vw;
-        }
-
-        #about h1{
-            font-size: 2.5vw;
-        }
-
-        #about img {
-            display: flex;
-            width: auto;
-        }
-
-        #contact{
-            margin: 3vw 0vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-
-        #contact .head{
-            font-size: 3vw;
-            padding: 0;
-            margin: .4vw;
-        }
-
-        #contact img{
-            object-fit: contain;
-            width: 45vw;
-            border-radius: 2vw;
-        }
-
-        form{
-            padding: 1vw 0vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            background-color: #28242c;
-            border-radius: 2vw;
-            color: white;
-            width: 40vw;
-        }
-
-        input[type=text],
-        input[type=email]{
-            border: .2vw solid black;
-            padding: 1.3vw 0vw;
-            padding-right: 15vw;
-            padding-left: 1vw;
-            margin: .3vw 0vw;
-            border-radius: 1vw;
-        }
-
-        form #dialog{
-            display: flex;
-            justify-items: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 1vw;
-            border: .2vw solid black;
-            border-radius: 2vw;
-            overflow: hidden;
-            background-color: white;
-            color: black;
-        }
-        
-
-        form span{
-            display: flex;
-            flex-direction: row;
-        }
-
-        form span > button{
-            padding: 1vw 6vw;
-            background-color: white;
-            border: .1vw solid black;
-        }
-
-        form #link{
-            display: flex;
-            flex-direction: row;
-            margin-top: 1vw;
-        }
-
-        form #link a{
-            margin: 1vw;
-            padding: .8vw 1vw;
-            border-radius: .5vw;
-            text-decoration: none;
-            text-transform: uppercase;
-            background-color: antiquewhite;
-            color: darkmagenta;
-            border-bottom: .5vw solid black ;
-            border-left: .5vw solid black ;
-            border-bottom-left-radius: 1vw;
-        }
-
-        form #link a:hover{
-            transition: .3s ease-in-out;
-            color: antiquewhite;
-            background-color: darkmagenta;
-            border-bottom: .5vw solid white ;
-            border-left: .5vw solid white ;
-        }
-
-        @media (max-width: 767px) {
-
-    body,html{
-        display: flex;
-        flex-direction: column;
-        /* flex-wrap: wrap; */
-        align-items: center;
-        justify-content: center;
-    }
-
-    .no-select{
-    -webkit-tap-highlight-color: transparent; 
-}
-
-
-    /* Header and Navigation */
-    header {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        padding: 0vw 2vw;
-        margin: 2vw;
-        border-radius: 15vw;
-    }
-
-    nav {
-        display: none;
-    }
-
-    #nav {
-        display: flex;
-    }
-
-    #nav span h3{
-        font-size: 7vw;
-        background-color: #28242c;
-        color: #38fcac;
-        padding: 4vw 6vw;
-        margin-right: 5vw;
-        border-radius: 10vw;
-    }
-
-    .sidenav.open {
-        position: fixed;
-        z-index: 10000;
-        width: 100%; /* Open sidebar with 100% width on small screens */
-    }
-
-    #sidebar .sidenav {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .sidenav a {
-        font-size: 6vw; /* Adjust font size for small screens */
-    }
-
-    #sidebar .closebtn{
-        font-size: 10vw;
-    }
-
-    #right{
-            display: flex;
-            width: 25vw;
-        }
-
-    #left{
-        display: none;
-    }
-
-    /* Introduction Section */
-
-    #intro{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-direction: column;
-        }
-
-    .right {
-        font-size: 4vw;
-        margin: 0;
-    }
-
-    .left{
-        display: none;
-    }
-
-    /* Gallery Section */
-    #gallery span {
-        flex-direction: column;
-        align-items: center;
-    }
-
-
-    #gallery > span .box{
-        border-radius: 4vw;
-        overflow: hidden;
-    }
-
-    .box img {
-        width: 75vw;
-        height: fit-content;
-        border-radius: 4vw;
-    }
-
-    .box h4{
-            display:flex;
-            width: 60vw;
-        }
-
-    .box ul{
-        justify-content: left;
-        list-style-type: "⇒ ";
-    }
-
-    .box a{
-        margin: 1vw 0vw;
-        padding: .3vw 9vw ;
-        border-radius: 5vw;
-    }
-
-    /* About Section */
-
-    #about{
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10vw;
-        border-radius: 10vw;
-        width: 80vw;
-        /* padding: 0; */
-    }
-    #about span{
-        display: flex;
-        justify-content: left;
-        width: auto;
-        padding: 1vw 4vw;
-    }
-
-    #about h1{
-        font-size: 4.2vw;
-    }
-
-    #about img{
-        margin-top: 3vw;
-        height: 60vw;
-        width: 60vw;
-    }
-
-    /* Contact Section */
-
-    #contact{
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: auto;
-        height: auto;
-    }
-
-    #contact .head{
-        font-size: 9vw;
-        margin: 6vw 0vw;
-    }
-
-    #contact form {
-        padding: 0vw 4vw 2vw;
-        border-radius: 10vw;
-        width: auto;
-    }
-
-    #contact img{
-           display: none;
-        }
-
-        input[type=text],
-        input[type=email]{
-            width: 70vw;
-            margin-bottom: 3vw;
-            padding: 3vw 0vw;
-            padding-left: 5vw;
-            border-radius: 6vw;
-        }
-
-    #link {
-        flex-direction: column;
-    }
-
-        form #dialog{
-            width: 70vw;
-            border-radius: 5vw;
-        }
-
-        form span > button{
-            padding: 2vw 15vw;
-            border-top: none;
-            border-bottom: none;
-            background-color: white;
-            border: .1vw solid black;
-        }
-
-        form #link{
-            display: flex;
-            flex-direction: row;
-            margin-top: 1vw;
-        }
-
-        form #link a{
-            font-size: 3vw;
-            font-weight: 600;
-            margin: 5vw 2vw;
-            border-radius: 2vw;
-            border-bottom: 1vw solid black ;
-            border-left: 1vw solid black ;
-            border-bottom-left-radius: 2vw;
-        }
-}
-
-</style>
-
+    
 </head>
 <body>
     <header>
@@ -573,7 +55,7 @@
     </section>
 
     <section id="gallery" class="no-select">
-        <span>
+        <span class="desk">
             <div class="box">
                 <img src="Screenshot 2023-10-06 120730.png" alt="project-1" width="500px" height="256px">
                 <span>
@@ -616,6 +98,51 @@
             </div>
         </span> -->
 
+        <!-- swiper code -->
+        <div class="swiper mySwiper mobile">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div class="box">
+                            <img src="Screenshot 2023-10-06 120730.png" alt="project-1" width="500px" height="256px">
+                        <span>
+                            <h2>A Portfolio website</h2>
+                            <ul>
+                                <li>Landing page Clone</li>
+                                <li>Gsap animation</li>
+                                <li>Awwwards Website</li>
+                                <li>Mobile-Responsive</li>
+                            </ul>
+                        </span>
+                        <a href="https://project-1-jms.netlify.app/" target="_blank"><p>PROJECT-1</p></a>
+                        </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="box">
+                        <img src="project-2-ss.png" alt="project-2" width="500px" height="256px">
+                        <span>
+                            <h2>Web Replica - Peter Mckinnon</h2>
+                        <ul>
+                            <li>Parallax Scrolling</li>
+                            <li>Smooth Loading</li>
+                            <li>Cart system using JS</li>
+                            <li>Mobile-Responsive</li>
+                        </ul>
+                        </span>
+                        <a href="https://project-2-jms.netlify.app/" target="_blank"><p>PROJECT-2</p></a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        
+
     </section>
 
     <section id="about">
@@ -652,6 +179,10 @@
         <img src="contact us.jpg" alt="contact me" width="600px" >
     </section>
 
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <script>
         function openNav() {
     var sidebar = document.getElementById("sidebar");
@@ -665,6 +196,22 @@ function closeNav() {
     var sidebar = document.getElementById("sidebar");
     sidebar.style.width = "0"; // Close sidebar by setting width to 0
 }
+
+ //Initialize Swiper 
+    var swiper = new Swiper(".mySwiper", {
+        effect: "cube",
+        grabCursor: true,
+        cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
     </script>
 
 </body>
