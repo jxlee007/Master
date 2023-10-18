@@ -1,15 +1,15 @@
-
-*{
+* {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: 'Montserrat', sans-serif;
 }
 
-.mobile{
+.mobile {
     display: none;
 }
 
-body,html{
+body,
+html {
     margin: 0;
     padding: 0;
     height: auto;
@@ -17,11 +17,11 @@ body,html{
     background-color: #17b705;
 }
 
-.swiper .mySwiper{
+.swiper .mySwiper {
     display: none;
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,22 +31,22 @@ header{
     border-radius: 9vw;
     background-color: rgba(4, 123, 4, 0.555);
     gap: 11vw;
-    
+
 }
 
-#right{
+#right {
     display: flex;
     width: 10vw;
-    
+
 }
 
-#nav{
+#nav {
     display: none;
 }
 
 /* added changes */
 
-.sidenav{
+.sidenav {
     height: 100vh;
     width: 0;
     position: fixed;
@@ -58,7 +58,7 @@ header{
     padding-top: 60px;
 }
 
-#sidebar a{
+#sidebar a {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,11 +72,11 @@ header{
     color: #fff;
 }
 
-.sidenav a:hover{
+.sidenav a:hover {
     color: #17b705;
 }
 
-.sidenav .closebtn:hover{
+.sidenav .closebtn:hover {
     color: #17b705;
 }
 
@@ -87,17 +87,17 @@ header{
     margin-left: 50px;
     color: white;
     font-size: 2.5vw;
-    }
+}
 
 /* navigation desktop */
-nav{
+nav {
     background-color: transparent;
     padding: 1vw 2vw;
     border: .1vw solid white;
     border-radius: 3vw;
 }
 
-nav > a{
+nav>a {
     text-decoration: none;
     text-transform: capitalize;
     color: white;
@@ -105,54 +105,54 @@ nav > a{
     font-weight: 600;
 }
 
-nav > a:hover{
+nav>a:hover {
     background-color: darkgreen;
     color: white;
     border-radius: 2vw;
     transition: .3s ease-in-out;
 }
 
-#left{
+#left {
     display: flex;
     width: 15vw;
 }
 
-#intro{
+#intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0vw 2vw;
 }
 
-.right{
+.right {
     display: flex;
     color: antiquewhite;
     margin: 0vw 1vw 0vw 6vw;
     font-size: 2vw;
 }
 
-.left{
+.left {
     display: flex;
     margin: 0vw 4vw;
 }
 
-.left > img{
+.left>img {
     border-radius: 2vw;
 }
 
-#gallery{
+#gallery {
     display: flex;
     flex-direction: column;
     margin: 3vw 5vw;
 }
 
-#gallery > span{
+#gallery>span {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
 
-#gallery > span .box{
+#gallery>span .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,20 +161,20 @@ nav > a:hover{
     padding: 0vw 0vw 1vw;
     margin: 2vw;
     color: antiquewhite;
-    border: .9vw solid #38fcac ;
+    border: .9vw solid #38fcac;
     border-radius: 2.9vw;
 }
 
-.box img{
+.box img {
     border-radius: 2vw;
 }
 
-.box h2{
-    display:flex;
+.box h2 {
+    display: flex;
     width: 34vw;
 }
 
-.box a{
+.box a {
     text-decoration: none;
     background-color: #38fcac;
     color: black;
@@ -182,13 +182,13 @@ nav > a:hover{
     border-radius: 3vw;
 }
 
-.box a:hover{
+.box a:hover {
     color: antiquewhite;
     background-color: black;
     transition-duration: .3s;
 }
 
-#about{
+#about {
     display: flex;
     background-color: #28242c;
     margin: 8vw 0vw;
@@ -199,7 +199,7 @@ nav > a:hover{
     gap: 5vw;
 }
 
-#about span{
+#about span {
     display: flex;
     flex-direction: column;
     color: antiquewhite;
@@ -207,7 +207,7 @@ nav > a:hover{
     width: 40vw;
 }
 
-#about h1{
+#about h1 {
     font-size: 2.5vw;
 }
 
@@ -216,7 +216,9 @@ nav > a:hover{
     width: auto;
 }
 
-#contact{
+
+
+#contact {
     margin: 3vw 0vw;
     display: flex;
     flex-direction: row;
@@ -224,19 +226,45 @@ nav > a:hover{
     align-items: center;
 }
 
-#contact .head{
-    font-size: 3vw;
-    padding: 0;
-    margin: .4vw;
+#contact div{
+    background-color: #28242c;
+    border: .5vw solid #38fcac;
+    border-radius: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6vw 4vw;
 }
 
-#contact img{
+#contact div i {
+    color: antiquewhite;
+    font-size: 2vw;
+}
+
+#contact div p{
+    color: white;
+}
+
+#contact div a{
+    color: #fff;
+}
+
+#contact .head {
+    font-size: 4vw;
+    padding: 0;
+    margin: .4vw;
+    color: antiquewhite;
+    text-transform: capitalize;
+}
+
+#contact img {
     object-fit: contain;
     width: 45vw;
     border-radius: 2vw;
 }
 
-form{
+/* form {
     padding: 1vw 0vw;
     display: flex;
     flex-direction: column;
@@ -249,7 +277,7 @@ form{
 }
 
 input[type=text],
-input[type=email]{
+input[type=email] {
     border: .2vw solid black;
     padding: 1.3vw 0vw;
     padding-right: 15vw;
@@ -258,7 +286,7 @@ input[type=email]{
     border-radius: 1vw;
 }
 
-form #dialog{
+form #dialog {
     display: flex;
     justify-items: center;
     align-items: center;
@@ -272,24 +300,24 @@ form #dialog{
 }
 
 
-form span{
+form span {
     display: flex;
     flex-direction: row;
 }
 
-form span > button{
+form span>button {
     padding: 1vw 6vw;
     background-color: white;
     border: .1vw solid black;
 }
 
-form #link{
+form #link {
     display: flex;
     flex-direction: row;
     margin-top: 1vw;
 }
 
-form #link a{
+form #link a {
     margin: 1vw;
     padding: .8vw 1vw;
     border-radius: .5vw;
@@ -297,16 +325,15 @@ form #link a{
     text-transform: uppercase;
     background-color: antiquewhite;
     color: darkmagenta;
-    border-bottom: .5vw solid black ;
-    border-left: .5vw solid black ;
+    border-bottom: .5vw solid black;
+    border-left: .5vw solid black;
     border-bottom-left-radius: 1vw;
 }
 
-form #link a:hover{
+form #link a:hover {
     transition: .3s ease-in-out;
     color: antiquewhite;
     background-color: darkmagenta;
-    border-bottom: .5vw solid white ;
-    border-left: .5vw solid white ;
-}
-
+    border-bottom: .5vw solid white;
+    border-left: .5vw solid white;
+} */
