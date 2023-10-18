@@ -235,16 +235,35 @@ border-radius: 5vw;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: auto;
-        height: auto;
+        margin-bottom: 8vh;
     }
+
+    #contact div{
+        flex-wrap: wrap;
+        padding: 2vw 0vw;
+        width: 90vw;
+        border-radius: 10vw;
+    }
+
+    #contact div i {
+        font-size: 5vw;
+    }
+
+    #contact div p{
+        font-size: 4vw;
+    }
+
 
     #contact .head {
         font-size: 9vw;
         margin: 6vw 0vw;
     }
 
-    #contact form {
+    #contact img {
+        display: none;
+    }
+
+    /* #contact form {
         padding: 0vw 4vw 2vw;
         border-radius: 10vw;
         width: auto;
@@ -295,4 +314,4 @@ border-radius: 5vw;
         border-left: 1vw solid black;
         border-bottom-left-radius: 2vw;
     }
-}
+} */
