@@ -1,3 +1,0 @@
-- landing pages
-- full project
-- 
