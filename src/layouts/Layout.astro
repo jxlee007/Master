@@ -33,7 +33,7 @@
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div class="relative flex min-h-screen flex-col">
             <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-              <div class="container flex h-16 items-center justify-between">
+              <div class="container flex h-16 items-center justify-between z-2">
                 <a href="/" class="flex items-center space-x-2">
                   <img src="/icon.png" alt="JSM Logo" class=" ml-4 size-10 w-auto" />
                 </a>
@@ -50,7 +50,7 @@
             <main class="flex-1">
               <slot />
             </main>
-            <footer class="border-t py-6 md:py-0">
+            <footer class=" z-2 border-t py-6 md:py-0">
               <div class="container flex flex-col items-center justify-between gap-4 md:h-16 md:flex-row">
                 <p class="ml-6 text-sm text-muted-foreground">
                   © {new Date().getFullYear()} JSM/Portfolio. All rights reserved.

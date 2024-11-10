@@ -64,3 +64,12 @@
     @apply bg-background text-foreground;
   }
 }
+#fixed-image {
+  position: fixed;
+  top: 0; /* Adjust as needed */
+  right: 0; /* Adjust as needed */
+  width: 50%; /* Adjust as needed */
+  height: 100%; /* Adjust as needed */
+  object-fit: cover; /* Ensures the image covers the area */
+  z-index: -1; /* Ensures it stays behind other content */
+}
